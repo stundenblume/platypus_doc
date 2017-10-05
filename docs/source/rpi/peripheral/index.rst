@@ -14,7 +14,6 @@ This section shows how to add the following peripherals to the RPi board
 
 
 .. toctree::
-   :hidden:
 
    Xbee radios <xbee>
    adafruit GPS <gps>
