@@ -1,6 +1,6 @@
 
 =========================
-GAMS/MADARA Quick Start Tutorials
+GAMS/MADARA Programming Basics
 =========================
 In this page, we will provide you a quick start with GAMS/MADARA.
 
@@ -10,9 +10,3 @@ Then, you will learn how to develop your first program with ROS, namely programm
 Finally, some more advanced concepts will be introduced through the development of a cleaning application with the Turtlesim simulator. 
 At the end of ROS Quick Start tutorials, you will get a full understanding of ROS that allows you to dive deeper and develop more advanced robotics applications. 
 
-
-.. toctree::
-
-   GAMS/MADARA Background <background>
-   GAMS/MADARA Programming Basics <programming-basics>
-   GAMS/MADARA Simulation <simulation>

@@ -1,7 +1,8 @@
 
 =========================
-GAMS/MADARA Quick Start Tutorials
+GAMS/MADARA Background
 =========================
+
 In this page, we will provide you a quick start with GAMS/MADARA.
 
 
@@ -11,8 +12,3 @@ Finally, some more advanced concepts will be introduced through the development 
 At the end of ROS Quick Start tutorials, you will get a full understanding of ROS that allows you to dive deeper and develop more advanced robotics applications. 
 
 
-.. toctree::
-
-   GAMS/MADARA Background <background>
-   GAMS/MADARA Programming Basics <programming-basics>
-   GAMS/MADARA Simulation <simulation>
