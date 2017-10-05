@@ -6,7 +6,7 @@ ROS Quick Start Tutorials
 =========================
 In this page, we will provide you a quick start with ROS.
 
-.. image:: ../images/ros/ros.png
+.. image:: ./images/ros.png
     :align: center
 
 
@@ -18,7 +18,6 @@ At the end of ROS Quick Start tutorials, you will get a full understanding of RO
 
 
 .. toctree::
-   :hidden:
 
    ROS Background <ros-background>
    ROS Programming Basics <ros-programming-basics>
