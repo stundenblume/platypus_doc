@@ -17,6 +17,7 @@ Contents:
    source/ndg
    source/Arch
    source/RPi
+   source/rpi/index
    source/git_rtd
    source/git_workflow
 
