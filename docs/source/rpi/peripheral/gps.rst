@@ -4,6 +4,11 @@
 Installing the Adafruit GPS to the Raspberry Pi
 =============================================
 
+.. WARNING::
+
+  @ To be done by Renan
+
+
 
 About the sensor
 -----------------------------

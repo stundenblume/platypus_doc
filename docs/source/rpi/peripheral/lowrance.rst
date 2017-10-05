@@ -4,6 +4,12 @@
 Installing Lowrance sidescanner to the Raspberry Pi
 =============================================
 
+.. WARNING::
+
+  @ To be done by ?????
+
+
+
 
 About the sensor
 -----------------------------

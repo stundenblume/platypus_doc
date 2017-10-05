@@ -3,6 +3,12 @@
 Setting Up the Raspberry Pi
 ===============
 
+.. WARNING::
+
+  @ To be done by Renan
+
+
+
 
 .. toctree::
 

@@ -4,6 +4,11 @@
 Installing the Water Sampling Device to the Raspberry Pi
 =============================================
 
+.. WARNING::
+
+  @ To be done by ????
+
+
 
 About the sensor
 -----------------------------

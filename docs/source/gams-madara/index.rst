@@ -4,6 +4,10 @@ GAMS/MADARA Quick Start Tutorials
 =========================
 In this page, we will provide you a quick start with GAMS/MADARA.
 
+.. WARNING::
+
+  @ To be done by Marcelo
+
 
 There are three parts of the ROS Quick Start tutorials. In the first part, you will get an understanding about ROS main concepts.
 Then, you will learn how to develop your first program with ROS, namely programming a publisher and subscriber using both C++ and Python.

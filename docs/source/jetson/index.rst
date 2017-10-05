@@ -4,6 +4,12 @@ Setting Up the Jetson Board
 ===============
 
 
+.. WARNING::
+
+  @ To be done by Roger
+
+
+
 .. toctree::
 
    Installing the OS <os-install>

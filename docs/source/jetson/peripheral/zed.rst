@@ -4,6 +4,12 @@
 Installing the Zed Drivers
 =============================================
 
+.. WARNING::
+
+  @ To be done by Roger
+
+
+
 
 About the sensor
 -----------------------------

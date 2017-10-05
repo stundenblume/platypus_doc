@@ -3,13 +3,17 @@
 LSA Contributors
 ========================
  
+The list of contributors to this document.
 
+	* `@Alexandre Amory <https://amamory.github.io/>`_
 
-	* `@Alexandre Amory <https://github.com/amamory>`_
+	* @Roger  
 
-	* @Fulano 
+	* @Renan	
 
-	* @Ciclano	
+	* @Marcelo
+
+	* @Davi
 
 	* `@Beltrano com webpage <https://github.com/Amahmoud1994>`_
 
