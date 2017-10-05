@@ -30,15 +30,12 @@ Summary
 .. toctree::
    :maxdepth: 3
     
-   source/background/index
-   source/getting_started/get-started
-   source/ros/ros-tutorials
+   source/getting_started/index
+   source/ros/index
    source/gams-madara/index
    source/rpi/index
    source/jetson/index
    source/field-testing/index
-   source/git_rtd
-   source/git_workflow
    source/contributors/index
 
 
