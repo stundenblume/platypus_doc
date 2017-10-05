@@ -1,7 +1,7 @@
 
 
 =============================================
-Installing the IMU to the Raspberry Pi
+Installing the Zed Drivers
 =============================================
 
 
@@ -12,7 +12,7 @@ About the sensor
  - link to datasheet of the models available at LSA
 
 
-How to physically connect it to the RPi
+How to physically connect it
 -----------------------------
 
 - describe power requirements
@@ -32,6 +32,6 @@ describe here any known limitation of the sensor or its drivers so the next stud
 How to test it
 -----------------------------
 
-- basic testing to see if the sensor is working on the RPi
+- basic testing to see if the sensor is working 
 
 

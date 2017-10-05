@@ -1,11 +1,4 @@
 
-.. gaitech documentation master file, created by
-   sphinx-quickstart on Sun May  8 09:56:52 2016.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-.. _index:
-
 ===============
 Setting Up the Jetson Board
 ===============
@@ -20,7 +13,3 @@ Setting Up the Jetson Board
    Connecting the Jetson to the Rpi board <connecting>
    Testing <testing>
 
-
-
-Title 1 example
------------------------------

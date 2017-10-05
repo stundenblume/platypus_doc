@@ -1,17 +1,32 @@
-.. tutos documentation master file, created by
-   sphinx-quickstart on Sat Jul  5 13:23:59 2014.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
 
+==========================
 Welcome to LSA's Platypus Boat guides
 ==========================
 
-Contents:
+
+About the Boats
+-----------------
+
+.. image:: ./images/boat.png
+    :align: center
+
+
+talk a little bit about the boats and the purpose of this document.
+
+show some youtube video of the boats in action.
+
+Autonomous Systems Laboratoty - PUCRS
+--------------------------------------
+
+talk about LSA, link to the webpage
+
+
+Summary
+--------------------------------------
 
 .. toctree::
    :maxdepth: 3
     
-   source/intro
    source/background/index
    source/getting_started/get-started
    source/ros/ros-tutorials
@@ -23,10 +38,19 @@ Contents:
    source/git_workflow
    source/contributors/index
 
-Indices and tables
-==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+Disclaimer
+----------
+
+The purpose of this document is for the use of LSA group only, but we open it in case it can be usefull for someone else.
+Thus, we dont fill obliged to give any technical support, although we might help in some special situations.
+In addition, we are not associated with Platypus LLC. 
+
+Everything you find here is without absolutly no waranty and I'm not responsible for any inconveniences or issues that might occurs. 
+
+Feedback
+--------
+
+Don't hesitate to ask about some additional info or next guides and also if you find some mistakes, please let me know.
+This can be done by submitting an issue or a push request on github.
 
