@@ -6,7 +6,7 @@ In this page, we will provide you a quick start with GAMS/MADARA.
 
 .. WARNING::
 
-  @ To be done by Marcelo
+  @ To be done by Marcelo and Davi
 
 
 There are three parts of the ROS Quick Start tutorials. In the first part, you will get an understanding about ROS main concepts.
