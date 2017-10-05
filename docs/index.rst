@@ -17,9 +17,15 @@ Contents:
    source/ndg
    source/Arch
    source/RPi
+   source/getting_started/get-started
+   source/ros/ros-tutorials
+   source/gams-madara/index
    source/rpi/index
+   source/jetson/index
+   source/field-testing/index
    source/git_rtd
    source/git_workflow
+   source/contributors/index
 
 Indices and tables
 ==================

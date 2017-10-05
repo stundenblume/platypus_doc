@@ -11,14 +11,7 @@ Setting Up the Raspberry Pi
 
 
 
-Title 1 example
------------------------------
-
-
-
-
 .. toctree::
-   :hidden:
 
    Installing the OS <os-install>
    Setting Up the OS <setup-os>
@@ -28,3 +21,6 @@ Title 1 example
    Setup Video streamming <video/index>
    Testing the Rpi <testing>
 
+
+Title 1 example
+-----------------------------

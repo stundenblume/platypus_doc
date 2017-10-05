@@ -1,15 +1,15 @@
 
 
 =============================================
-Installing XXXX to the Raspberry Pi
+Installing Xbee to the Raspberry Pi
 =============================================
 
 
 About the sensor
 -----------------------------
 
- - where to buy, how much
- - link to datasheet of the models available at LSA
+- where to buy, how much
+- link to datasheet of the models available at LSA
 
 
 How to physically connect it to the RPi
