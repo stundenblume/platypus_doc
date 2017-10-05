@@ -7,10 +7,10 @@ Welcome to LSA's Platypus Boat guides
 About the Boats
 -----------------
 
-.. image:: ./getting_started/images/airboat.png
+.. image:: ./source/getting_started/images/airboat.png
     :align: center
 
-.. image:: ./getting_started/images/propboat.png
+.. image:: ./source/getting_started/images/propboat.png
     :align: center
 
 
