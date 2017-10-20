@@ -2,7 +2,7 @@
 Installing JetPack L4T
 =======================
 
-JetPack (the Jetson SDK) is an on-demand all-in-one package that bundles and installs all software tools required to develop for the NVIDIA® Jetson Embedded Platform (including flashing the Jetson Developer Kit with the latest OS images). JetPack includes host and target developer tools, APIs and packages (OS images, tools, APIs, middleware, samples, documentation including compiling samples) to enable developers to jump-start their development environment for developing with the Jetson Embedded Platform. The latest release of JetPack runs on an Ubuntu 14.04 Linux 64-bit host system and supports the Jetson TK1 Developer Kit [1]_.
+JetPack (the Jetson SDK) is an on-demand all-in-one package that bundles and installs all software tools required to develop for the NVIDIA® Jetson Embedded Platform (including flashing the Jetson Developer Kit). JetPack includes host and target developer tools, APIs and packages (OS images, tools, APIs, middleware, samples, documentation including compiling samples) to enable developers to jump-start their development environment for developing with the Jetson Embedded Platform. The latest release of JetPack runs on an Ubuntu 14.04 Linux 64-bit host system and supports the Jetson TK1 Developer Kit [1]_.
 
 Setting up the local host
 --------------------------
@@ -32,6 +32,9 @@ After downloading all packages, it starts to installing them in your local machi
    :align: center
    :width: 500pt
 
+Flashing the Jetson board
+--------------------------
+
 Next step is to configure how the binaries are transmited to the Jetson board. Thus, JetPack asks what is the layout of the network to transmit the data. Select **Device accesses internet via houter/switch.** and click ``Next``, as the image:
 
 .. image:: images/jetpack_4.png
@@ -50,7 +53,7 @@ In order to check if the Jetson board is set in recovery mode, open the terminal
 
     $ lsusb
 
-If the board is in revery mode, you should see the Jetson listed as Nvidia in the output, as the image:
+If the board is in revery mode, you should see the Jetson listed as NVidia (*ID 0955:7140 NVidia Corp.*) in the output, as the image:
 
 .. image:: images/jetpack_6.png
    :align: center
