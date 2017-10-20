@@ -24,7 +24,7 @@ This script installs ROS Indigo Desktop and the Point Cloud Library.
 Creating Catkin workspace to run ROS
 -------------------------------------
 
-Catkin packages can be built as a standalone project, in the same way that normal cmake projects can be built, but catkin also provides the concept of workspaces, where you can build multiple, interdependent packages together all at once. A catkin workspace is a folder where you modify, build, and install catkin packages [2]_. In order to create a Catkin workspace, you should download and run the file `createCatkin.sh` as:
+Catkin packages can be built as a standalone project, in the same way that normal cmake projects can be built, but catkin also provides the concept of workspaces, where you can build multiple, interdependent packages together all at once. A catkin workspace is a folder where you modify, build, and install catkin packages [2]_. In order to create a Catkin workspace, you should download and run the file ``createCatkin.sh`` as:
 
 .. code-block:: bash
 
