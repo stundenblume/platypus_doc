@@ -51,9 +51,7 @@ Summary
    Installing JetPack L4T <os-install>
    Setting Up the OS <setup-os>
    Installing ROS <ros>
-   Installing Tensorflow <tensorflow>
-   Connecting the Jetson to the Rpi board <connecting>
-   Testing <testing>
+   Installing ZED Camera <zed>
 
 References
 -----------
