@@ -8,7 +8,7 @@ NVIDIA Jetson TK1 exhibits a lot of promise with lots of raw performance for its
 Installing Grinch kernel
 --------------------------
 
-The Grinch Kernel for L4T provides over 60 changes and additions to the kernel, including fixes, configuration, module and firmware support to the stock kernel. The kernel is written and supported by Jetson Forum user Santyago. For further information about the Grinch Kernel, please see the `NVidia Jetson Forum <https://devtalk.nvidia.com/forums/board/162/>`.
+The Grinch Kernel for L4T provides over 60 changes and additions to the kernel, including fixes, configuration, module and firmware support to the stock kernel. The kernel is written and supported by Jetson Forum user Santyago. For further information about the Grinch Kernel, please see the `NVidia Jetson Forum <https://devtalk.nvidia.com/forums/board/162/>`_.
 
 In order to install the Grinch kernel, download the ``installGrinch.sh`` file and run as:
 
@@ -75,7 +75,13 @@ The script installs the following packages:
 Setting TK1 as Access Point
 ----------------------------
 
-This configuration allows the Jetson board to work as access point to connect to other devices. The configuration below refers specifically to TP Link (`TL-WN722N V1 <http://www.tp-link.com/us/download/TL-WN722N.html>`_) - chipset Atheros Communications, Inc. AR9271 802.11n. Other access points may have a different configuration. By default, Grinch kernel has compatible drivers to the TP Link chipset and allows Wifi network connection. Thus, we have to set the device as hotspot. In order to do so, download and run the ``tk1_hotspot.sh`` file as:
+This configuration allows the Jetson board to work as access point to connect to other devices. The configuration below refers specifically to TP Link (`TL-WN722N V1 <http://www.tp-link.com/us/download/TL-WN722N.html>`_) - chipset Atheros Communications, Inc. AR9271 802.11n. Other access points may have a different configuration. 
+
+.. image:: images/tplink.jpg
+    :align: center
+    :width: 500pt
+
+By default, Grinch kernel has compatible drivers to the TP Link chipset and allows Wifi network connection. Thus, we have to set the device as hotspot. In order to do so, download and run the ``tk1_hotspot.sh`` file as:
 
 .. code-block:: bash
 

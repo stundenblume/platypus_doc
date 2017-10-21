@@ -51,7 +51,7 @@ Summary
    Installing JetPack L4T <os-install>
    Setting Up the OS <setup-os>
    Installing ROS <ros>
-   Installing ZED Camera <zed>
+   Peripheral <peripheral/index>
 
 References
 -----------
