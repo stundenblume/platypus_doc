@@ -2,11 +2,28 @@
 Setting TK1 as Access Point
 ============================
 
-This configuration allows the Jetson board to work as access point to connect to other devices. The configuration below refers specifically to TP Link (`TL-WN722N V1 <http://www.tp-link.com/us/download/TL-WN722N.html>`_) - chipset Atheros Communications, Inc. AR9271 802.11n. Other access points may have a different configuration. 
+This configuration allows the Jetson board to work as access point to connect to other devices. We configure the Jetson to work as access point specifically using TP Link (`TL-WN722N V1 <http://www.tp-link.com/us/download/TL-WN722N.html>`_) - chipset Atheros Communications, Inc. AR9271 802.11n. Other access points may have a different configuration. 
 
 .. image:: ../images/tplink.jpg
     :align: center
     :width: 500pt
+
+
+According with `TL-WN722N Datasheet <http://static.tp-link.com/TL-WN722N(UN)(US)_V2_Datasheet.pdf>`_, this wireless USB adapter connects your notebook or desktop computer to a wireless network. It has the following features:
+
++-------------------------------------------------------------------------------------------+
+| - Wireless Standards: IEEE 802.11n, IEEE 802.11g, IEEE 802.11b                            |
+| - Supports WPA/WPA2 data security, IEEE802.1x authentication, TKIP/AES and WEP encryption |
+| - Frequency: 2.4~2.4835GHz                                                                |
+| - Signal Rate: 150Mbps at 2.4GHz                                                          |
+| - Provides USB 2.0 interface                                                              |
+| - Wireless Modes: Ad-Hoc and infrastructure mode                                          |
+| - Wireless Security: WEP, WPA-PSK/WPA2-PSK Encryptions                                    |
++-------------------------------------------------------------------------------------------+
+
+
+Configuring TL-WN722N as Access Point
+--------------------------------------
 
 By default, Grinch kernel has compatible drivers to the TP Link chipset and allows Wifi network connection. Thus, we have to set the device as hotspot. In order to do so, download and run the ``tk1_hotspot.sh`` file as:
 
