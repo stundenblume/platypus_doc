@@ -52,6 +52,7 @@ Summary
    Setting Up the OS <setup-os>
    Installing ROS <ros>
    Peripheral <peripheral/index>
+   Cloning and Restoring Image <image>
 
 References
 -----------
