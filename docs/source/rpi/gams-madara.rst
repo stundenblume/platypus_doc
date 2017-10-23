@@ -3,6 +3,10 @@
 Installing GAMS/MADARA to the Raspberry Pi
 =============================================
 
+.. WARNING::
+
+  @ To be done by Marcelo
+
 
 About GAMS/MADARA
 -----------------------------
