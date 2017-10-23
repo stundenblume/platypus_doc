@@ -5,7 +5,7 @@ Installing GAMS/MADARA to the Raspberry Pi
 
 .. WARNING::
 
-  @ To be done by Marcelo
+  @ To be done by Marcelo e Davi
 
 
 About GAMS/MADARA
@@ -24,6 +24,11 @@ How to install the driver and its depedencies
 - how to install its depedencies
 - how to install software depedencies and drivers the required
 - provide a script to install it all at once
+
+GAMS/MADARA working with ROS
+-----------------------------
+- Marcelo e Davi describe the interface between them, limitations, how to compile it, how to test it.
+
 
 Known limitations
 -----------------------------
