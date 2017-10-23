@@ -13,20 +13,20 @@ The L3GD20 and the LSM303DLHC have many configurable options, including dynamica
 Specifications
 ---------------
 
-+---------------------------------------------------------------------+
-| - Dimensions: 0.8" × 0.5" × 0.1" (20 × 13 × 3 mm)                   |
-| - Weight without header pins: 0.7 g (0.02 oz)                       |
-| - Operating voltage: 2.5 to 5.5 V                                   |
-| - Supply current: 10 mA                                             |
-| - Output format (I²C):                                              |
-|   - Gyro: one 16-bit reading per axis                               |
-|   - Accelerometer: one 12-bit reading (left-justified) per axis     |
-|   - Magnetometer: one 12-bit reading (right-justified) per axis     |
-| - Sensitivity range (configurable):                                 |
-|   - Gyro: ±250, ±500, or ±2000°/s                                   |
-|   - Accelerometer: ±2, ±4, ±8, or ±16 g                             |
-|   - Magnetometer: ±1.3, ±1.9, ±2.5, ±4.0, ±4.7, ±5.6, or ±8.1 gauss |
-+---------------------------------------------------------------------+
++-----------------------------------------------------------------------+
+| - Dimensions: 0.8" × 0.5" × 0.1" (20 × 13 × 3 mm)                     |
+| - Weight without header pins: 0.7 g (0.02 oz)                         |
+| - Operating voltage: 2.5 to 5.5 V                                     |
+| - Supply current: 10 mA                                               |
+| - Output format (I²C):                                                |
+|     - Gyro: one 16-bit reading per axis                               |
+|     - Accelerometer: one 12-bit reading (left-justified) per axis     |
+|     - Magnetometer: one 12-bit reading (right-justified) per axis     |
+| - Sensitivity range (configurable):                                   |
+|     - Gyro: ±250, ±500, or ±2000°/s                                   |
+|     - Accelerometer: ±2, ±4, ±8, or ±16 g                             |
+|     - Magnetometer: ±1.3, ±1.9, ±2.5, ±4.0, ±4.7, ±5.6, or ±8.1 gauss |
++-----------------------------------------------------------------------+
 
 
 Pinout
