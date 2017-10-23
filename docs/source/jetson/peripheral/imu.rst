@@ -119,6 +119,7 @@ Checking IMU values
 As a test, you can look at the raw readings from the sensors on your IMU to make sure it is OK by running:
 
 .. code-block:: bash
+
    $ minimu9-ahrs --mode raw
 
 The output should look something like this:
@@ -130,6 +131,51 @@ The output should look something like this:
   -1318   -3106   -1801     1899    1200    3688       15      17       2
   -1309   -3105   -1799     1874    1201    3671       17      20      -1
   -1309   -3105   -1799     1898    1214    3663       11      15      -2
+
+
+Installing ROS Package
+-----------------------
+
+In order to install the ROS package to access IMU data, first we have to download and install the `RTIMULib2 <https://github.com/RTIMULib/RTIMULib2/tree/master/Linux>`_ library by running:
+
+.. code-block:: bash
+
+   $ git clone https://github.com/RTIMULib/RTIMULib2.git
+   $ cd RTIMULib2/Linux/
+   $ mkdir build
+   $ cd build
+   $ cmake ..
+   $ make -j4
+   $ sudo make install
+   $ sudo ldconfig
+
+Having the RTIMULib2 library installed in the Jetson, download and install the i2c_imu package for ROS by typing:
+
+.. code-block:: bash
+
+   $ git clone https://github.com/jeskesen/i2c_imu.git
+   $ mv i2c_imu/ ~/catkin_ws/src/
+   $ cd ~/catkin_ws/
+   $ catkin_make
+
+
+Testing ROS Package
+-----------------------
+
+To test the ROS package for IMU, you should call the ``i2c_imu_auto.launch`` and check whether the topic ``/imu/data`` exists. To do so, run:
+
+.. code-block:: bash
+
+   $ roslaunch i2c_imu i2c_imu_auto.launch
+
+In another terminal, run:
+
+.. code-block:: bash
+
+   $ rostopic list
+
+And check the topics that appear.
+
 
 
 References
