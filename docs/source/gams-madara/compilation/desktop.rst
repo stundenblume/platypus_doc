@@ -52,6 +52,13 @@ When the scripts finishes, you should see in folder you called the script the fo
     └── VREP
 ```
 
+Some basic Git commands are(test):
+```
+git status
+git add
+git commit
+```
+
 
 
 
