@@ -44,10 +44,12 @@ Build C++ with ROS support
 
 When the scripts finishes, you should see in folder you called the script the following the following folder structure:
 
-.  
-├── ACE  
-├── GAMS  
-├── MADARA  
-└── VREP  
-
+    .
+    ├── build                   # Compiled files (alternatively `dist`)
+    ├── docs                    # Documentation files (alternatively `doc`)
+    ├── src                     # Source files (alternatively `lib` or `app`)
+    ├── test                    # Automated tests (alternatively `spec` or `tests`)
+    ├── tools                   # Tools and utilities
+    ├── LICENSE
+    └── README.md
 
