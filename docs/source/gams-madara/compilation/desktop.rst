@@ -44,13 +44,17 @@ Build C++ with ROS support
 
 When the scripts finishes, you should see in folder you called the script the following the following folder structure:
 
-```
+``
     .
+
     ├── ACE
+
     ├── GAMS
+
     ├── MADARA
+
     └── VREP
-```
+`
 
 Some basic Git commands are(test):
 ```
