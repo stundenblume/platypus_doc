@@ -46,9 +46,9 @@ When the scripts finishes, you should see in folder you called the script the fo
 
 
 +-------------------------------------------------------+
-| .                                                  |
+| .                                                     |
 |    ├── ACE                                            |
-|	├── GAMS                                           |
+|	├── GAMS                                        |
 |    ├── MADARA                                         |
 |    └── VREP                                           |
 +-------------------------------------------------------+
