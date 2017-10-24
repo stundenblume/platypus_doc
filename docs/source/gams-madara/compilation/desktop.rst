@@ -5,7 +5,7 @@ GAMS/MADARA Compilation
 In this page, we will provide you a quick start to compile GAMS/MADARA for Linux Desktop, more specifically all scripts was tested with Linux Ubuntu 16.04.
 
 
-It is esperado that all dependencies be resolved automatically by scripts. You have to be aware and look for errors of download failures, which the script can't handle.
+It is expected that all dependencies be resolved automatically by scripts. You have to be aware and look for errors of download failures, which the script can't handle.
 
 To download GAMS/MADARA, just run:
 
@@ -42,7 +42,7 @@ Build C++ with ROS support
 	$ $GAMS_ROOT/scripts/linux/base_build.sh prereqs ace madara gams ros
 
 
-When the scripts finishes, you should see in folder you called the script the following the following folder structure:
+When the scripts finishes, you should see in folder you called the script the following the following folders:
   
  - ACE  
  - GAMS  
