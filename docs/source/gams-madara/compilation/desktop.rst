@@ -43,11 +43,11 @@ Build C++ with ROS support
 
 
 When the scripts finishes, you should see in folder you called the script the following the following folder structure:
-<pre>
-    .
-    ├── ACE
-    ├── GAMS
-    ├── MADARA
-    └── VREP
-</pre>
+
+>    .
+>    ├── ACE
+>    ├── GAMS
+>    ├── MADARA
+>    └── VREP
+
 
