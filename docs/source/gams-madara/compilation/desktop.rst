@@ -43,11 +43,14 @@ Build C++ with ROS support
 
 
 When the compilation finishes, you should see in folder you called the above script the following folders:
-  
- - ace  
- - gams  
- - madara  
- - vrep  
+	
+.. code-block:: bash
+
+   . 
+   ├── ace  
+   ├── gams  
+   ├── madara  
+   └── vrep  
 
 Thus, scripting will show several environment variables to be configured in your to properly run and compile your gams/madara projects.
 
