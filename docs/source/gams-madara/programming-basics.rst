@@ -24,10 +24,19 @@ With this command, you create a project named ``tutorial1``, which has the follo
 .. code-block:: bash
 
    .
-   ├── bin  
-   ├── sim  
-   ├── src  
-   ├── action.bat  
-   ├── action.sh  
-   └── README.txt  
+   ├── bin                  # store binarie files
+   ├── sim                  # store simulation files
+   |    ├── agent_0.mf          #
+   |    ├── common.mf           #
+   |    ├── env.mf              #
+   |    ├── run.pl              #
+   ├── src                  # store your source code files
+   |    ├── algorithms          # store algorithms (non blocking piece of code)
+   |    ├── filters             #
+   |    ├── platforms           #
+   |    ├── threads             # store algorithms (blocking piece of code)
+   |    ├── transports          #
+   ├── action.bat           # script to compile and run the project in Windows
+   ├── action.sh            # script to compile and run the project in Linux
+   └── README.txt           # some how-to file with compile and run commands
  
