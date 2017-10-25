@@ -24,7 +24,7 @@ With this command, you create a project named ``tutorial1``, which has the follo
 .. code-block:: bash
 
    .
-   ├── bin                  # store binarie files
+   ├── bin                  # store binary files
    ├── sim                  # store simulation files
    |    ├── agent_0.mf          #
    |    ├── common.mf           #
