@@ -11,10 +11,20 @@ Finally, some more advanced concepts will be introduced through the development 
 At the end of ROS Quick Start tutorials, you will get a full understanding of ROS that allows you to dive deeper and develop more advanced robotics applications. 
 
 Project creation
---------------
+----------------
 
 To create a new GAMS project, you should use a linux script called gpc.pl. So, you should run the following in a terminal window:
 
 .. code-block:: bash
 
   $GAMS_ROOT/scripts/projects/gpc.pl --path $PROJECT_ROOT/tutorial1
+  
+ With this command, you create a project named tutorial1, which has the following folder structure:
+ 
+   bin
+   sim
+   src
+   action.bat
+   action.sh
+   README.txt
+ 
