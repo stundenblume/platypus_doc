@@ -23,8 +23,9 @@ With this command, you create a project named tutorial1, which has the following
  
 .. code-block:: bash
 
-   bin  
-   sim  
+   .
+   ├── bin  
+   ├── sim  
    src  
    action.bat  
    action.sh  
