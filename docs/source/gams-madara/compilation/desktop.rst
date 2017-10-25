@@ -52,6 +52,7 @@ When the scripts finishes, you should see in folder you called the script the fo
 Thus, scripting will show several environment variables to be configured in your to properly run and compile your gams/madara projects.
 
 .. code-block:: bash
+
 	$ export PROJECT_HOME=$HOME/gamsProjects
 	$ export ACE_ROOT=$HOME/ace/ACE_wrappers
 	$ export MADARA_ROOT=$HOME/madara
