@@ -42,7 +42,7 @@ Build C++ with ROS support
 	$ $GAMS_ROOT/scripts/linux/base_build.sh prereqs ace madara gams ros
 
 
-When the scripts finishes, you should see in folder you called the script the following the following folders:
+When the compilation finishes, you should see in folder you called the above script the following folders:
   
  - ace  
  - gams  
