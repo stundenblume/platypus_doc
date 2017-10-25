@@ -26,8 +26,8 @@ With this command, you create a project named tutorial1, which has the following
    .
    ├── bin  
    ├── sim  
-   src  
-   action.bat  
-   action.sh  
-   README.txt  
+   ├── src  
+   ├── action.bat  
+   ├── action.sh  
+   └── README.txt  
  
