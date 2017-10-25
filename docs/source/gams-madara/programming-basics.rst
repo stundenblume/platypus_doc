@@ -19,7 +19,7 @@ To create a new GAMS project, you should use a linux script called gpc.pl. So, y
 
   $GAMS_ROOT/scripts/projects/gpc.pl --path $PROJECT_ROOT/tutorial1
   
- With this command, you create a project named tutorial1, which has the following folder structure:
+With this command, you create a project named tutorial1, which has the following folder structure:
  
    bin
    sim
