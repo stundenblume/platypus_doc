@@ -73,7 +73,7 @@ Thus, scripting will show several environment variables to be configured in your
 JAVA SUPPORT
 ------------
 
-To allow the java compilation, you should install JAVA JDK (suggested JAVA 8) and configure the environment variable named `` JAVA_HOME``. To do that, just run the following commands:
+To allow the java compilation, you should install JAVA JDK (suggested JAVA 8) and configure the environment variable named ``JAVA_HOME``. To do that, just run the following commands:
 
 .. code-block:: bash
 
