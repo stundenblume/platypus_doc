@@ -79,7 +79,7 @@ If you are going to use Android in your aplications, you should download Android
 
 	$ ./build/tools/make-standalone-toolchain.sh --toolchain=arm-linux-androideabi-4.9 --arch=arm --platform=android-14 --install-dir=../android_arm_tools
 
-After the process is over, ``../android_arm_tools`` should be automatically created. After that, verify if the following environment variables are pointing to correct paths:
+After the process is over, ``../android_arm_tools`` should be automatically created. After that, verify if the following environment variables are pointing to correct paths: ``NDK``, ``LOCAL_CROSS_PREFIX``, ``SYSROOT``.
 
 .. code-block:: bash
 
