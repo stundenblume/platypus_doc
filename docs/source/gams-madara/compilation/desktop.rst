@@ -73,7 +73,15 @@ Thus, scripting will show several environment variables to be configured in your
 JAVA SUPPORT
 ------------
 
-To allow the java compilation 
+To allow the java compilation, you should install JAVA JDK (suggested JAVA 8) and configure the environment variable named `` JAVA_HOME``. To do that, just run the following commands:
+
+.. code-block:: bash
+
+	$ sudo add-apt-repository ppa:webupd8team/java
+	$ sudo apt-get update
+	$ sudo apt-get install oracle-java8-set-default
+	$ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+
 
 ANDROID SUPPORT
 ---------------
