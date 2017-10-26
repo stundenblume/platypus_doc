@@ -70,5 +70,23 @@ Thus, scripting will show several environment variables to be configured in your
 	$ export PATH=$PATH:$VREP_ROOT
 
 
+ANDROID SUPPORT
+---------------
+
+If you are going to use Android in your aplications, you should download Android NDK. Extract NDK files into a folder and run the following shell script command inside of that folder.
+
+.. code-block:: bash
+
+	$ ./build/tools/make-standalone-toolchain.sh --toolchain=arm-linux-androideabi-4.9 --arch=arm --platform=android-14 --install-dir=../android_arm_tools
+
+After the process is over, ``../android_arm_tools`` should be automatically created. After that, verify if the following environment variables are pointing to correct paths:
+
+.. code-block:: bash
+
+	$ export NDK=\$HOME/bin/android_arm_tools
+	$ export LOCAL_CROSS_PREFIX=\$NDK/bin/arm-linux-androideabi-
+	$ export SYSROOT=\$NDK/sysroot
+
+
 
 
