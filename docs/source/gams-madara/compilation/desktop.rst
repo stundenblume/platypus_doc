@@ -70,6 +70,11 @@ Thus, scripting will show several environment variables to be configured in your
 	$ export PATH=$PATH:$VREP_ROOT
 
 
+JAVA SUPPORT
+------------
+
+To allow the java compilation 
+
 ANDROID SUPPORT
 ---------------
 
