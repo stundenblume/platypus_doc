@@ -41,6 +41,16 @@ With this command, you create a project named ``tutorial1``, which has the follo
    └── README.txt           # some how-to file with compile and run commands
  
  
+ 
+ADDING MORE AGENTS INTO SIMULATION
+----------------------------------
+
+You can add more agents into simulation by running the following command into terminal:
+
+.. code-block:: bash
+
+  $GAMS_ROOT/scripts/projects/gpc.pl --agents 5 --randomize
+
 PRINTING INTO AGENT TERMINAL WINDOW
 -----------------------------------
  
