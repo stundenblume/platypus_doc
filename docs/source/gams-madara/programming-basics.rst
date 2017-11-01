@@ -40,7 +40,7 @@ With this command, you create a project named ``tutorial1``, which has the follo
    ├── action.sh            # script to compile and run the project in Linux
    └── README.txt           # some how-to file with compile and run commands
  
-CREATING ALGORITHMS
+Creating algorithms
 -------------------
 
 You can create an algorithm (named as ``talker``) into your project (called ``tutorial3``) by running the following code:
@@ -49,7 +49,7 @@ You can create an algorithm (named as ``talker``) into your project (called ``tu
 
   $GAMS_ROOT/scripts/projects/gpc.pl --new-algorithm talker --path $PROJECT_HOME/tutorial3
   
-CREATING THREADS
+Creating threads
 ----------------
 
 You can create a thread (named as ``sense``) into your project (called ``tutorial3``) by running the following code:
@@ -58,7 +58,7 @@ You can create a thread (named as ``sense``) into your project (called ``tutoria
 
   $GAMS_ROOT/scripts/projects/gpc.pl --new-thread sense
  
-ADDING MORE AGENTS INTO SIMULATION
+Adding more agents into simulation
 ----------------------------------
 
 You can add more agents into simulation by running the following command into terminal:
@@ -69,7 +69,7 @@ You can add more agents into simulation by running the following command into te
 
 With this command, your simulation will have 2 agents, which will generate randomized coordinates (lat, long). These values is stored into ``agent_0.mf`` and ``agent_1.mf``,whose are located into ``sim`` folder.
 
-KILLING BROKEN V-REP
+Killing broken V-REP
 --------------------
 
 Sometimes when you try to close your simulation, V-REP stops working. To fast kill it, just run the following command:
@@ -79,7 +79,7 @@ Sometimes when you try to close your simulation, V-REP stops working. To fast ki
   kill $(pgrep vrep)
 
 
-PRINTING INTO AGENT TERMINAL WINDOW
+Printing into agent terminal window
 -----------------------------------
  
 To print some message into Agent terminal window you can use the following command:
