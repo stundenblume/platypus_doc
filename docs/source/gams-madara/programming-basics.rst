@@ -69,6 +69,15 @@ You can add more agents into simulation by running the following command into te
 
 With this command, your simulation will have 2 agents, which will generate randomized coordinates (lat, long). These values is stored into ``agent_0.mf`` and ``agent_1.mf``,whose are located into ``sim`` folder.
 
+KILLING BROKEN V-REP
+--------------------
+
+Sometimes when you try to close your simulation, V-REP stops working. To fast kill it, just run the following command:
+
+.. code-block:: bash
+
+  kill $(pgrep vrep)
+
 
 PRINTING INTO AGENT TERMINAL WINDOW
 -----------------------------------
