@@ -40,6 +40,14 @@ With this command, you create a project named ``tutorial1``, which has the follo
    ├── action.sh            # script to compile and run the project in Linux
    └── README.txt           # some how-to file with compile and run commands
  
+CREATING ALGORITHMS
+-------------------
+
+You can create an algorithm name ``talker`` into your project (called ``tutorial3``) by running the following code:
+
+.. code-block:: bash
+
+  $GAMS_ROOT/scripts/projects/gpc.pl --new-algorithm talker --path $PROJECT_HOME/tutorial3
  
  
 ADDING MORE AGENTS INTO SIMULATION
