@@ -44,7 +44,7 @@ With this command, you create a project named ``tutorial1``, which has the follo
 PRINTING INTO AGENT TERMINAL WINDOW
 -----------------------------------
  
- To print some message into Agent terminal window you can use the following command:
+To print some message into Agent terminal window you can use the following command:
  
   madara_logger_ptr_log (gams::loggers::global_logger.get (), gams::loggers::LOG_MAJOR, " My message is hello folks!");
   
