@@ -77,15 +77,3 @@ Sometimes when you try to close your simulation, V-REP stops working. To fast ki
 .. code-block:: bash
 
   kill $(pgrep vrep)
-
-
-Printing into agent terminal window
------------------------------------
- 
-To print some message into Agent terminal window you can use the following command:
- 
-  madara_logger_ptr_log (gams::loggers::global_logger.get (), gams::loggers::LOG_MAJOR, " My message is hello folks!");
-  
- 
-
-
