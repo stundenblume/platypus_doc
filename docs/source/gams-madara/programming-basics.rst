@@ -38,7 +38,7 @@ After the project creation, we should create two algorithms ``producer`` and ``c
   $GAMS_ROOT/scripts/projects/gpc.pl --new-algorithm producer --path $PROJECT_HOME/tutorial1
   $GAMS_ROOT/scripts/projects/gpc.pl --new-algorithm consumer --path $PROJECT_HOME/tutorial1
   
-After those commands your filesystem looks like:
+After running those commands, your filesystem looks like:
 
 .. code-block:: bash
 
@@ -69,3 +69,22 @@ After those commands your filesystem looks like:
    ├── workspace.mwc
    └── README.txt           
    
+Now, we need add a second agent to our simulation, so we run the following command:
+
+.. code-block:: bash
+
+ $GAMS_ROOT/scripts/projects/gpc.pl --agents 2 --randomize
+ 
+ With that, the folder ``sim`` will get updated by the addition of file ``agent_1.mf``.
+ 
+ Finally, we have to configure the algorithm that each agent should run. Edit file ``agent_0.mf`` so the algorithm name be ``producer``:
+ 
+ .. code-block::
+ 
+  agent.0.algorithm = "producer";
+
+Edit file ``agent_1.mf`` so the algorithm name be ``consumer``:
+
+ .. code-block::
+ 
+  agent.0.algorithm = "consumer";
