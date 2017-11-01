@@ -76,11 +76,11 @@ Now, we need add a second agent to our simulation, so we run the following comma
 
  $GAMS_ROOT/scripts/projects/gpc.pl --agents 2 --randomize
  
- With that, the folder ``sim`` will get updated by the addition of file ``agent_1.mf``.
+With that, the folder ``sim`` will get updated by the addition of file ``agent_1.mf``.
  
- Finally, we have to configure the algorithm that each agent should run. Edit file ``agent_0.mf`` so the algorithm name be ``producer``:
+Finally, we have to configure the algorithm that each agent should run. Edit file ``agent_0.mf`` so the algorithm name be ``producer``:
  
- .. code-block::
+.. code-block::
  
   agent.0.algorithm = "producer";
 
