@@ -43,12 +43,20 @@ With this command, you create a project named ``tutorial1``, which has the follo
 CREATING ALGORITHMS
 -------------------
 
-You can create an algorithm name ``talker`` into your project (called ``tutorial3``) by running the following code:
+You can create an algorithm (named as ``talker``) into your project (called ``tutorial3``) by running the following code:
 
 .. code-block:: bash
 
   $GAMS_ROOT/scripts/projects/gpc.pl --new-algorithm talker --path $PROJECT_HOME/tutorial3
+  
+CREATING THREADS
+----------------
+
+You can create a thread (named as ``sense``) into your project (called ``tutorial3``) by running the following code:
  
+.. code-block:: bash
+
+  $GAMS_ROOT/scripts/projects/gpc.pl --new-thread sense
  
 ADDING MORE AGENTS INTO SIMULATION
 ----------------------------------
