@@ -26,10 +26,10 @@ With this command, you create a project named ``tutorial1``, which has the follo
    .
    ├── bin                  # store binary files
    ├── sim                  # store simulation files
-   |    ├── agent_0.mf          #
-   |    ├── common.mf           #
-   |    ├── env.mf              #
-   |    ├── run.pl              #
+   |    ├── agent_0.mf          # stores vrep port number, starting location(lat,long, alt) and algorithm name
+   |    ├── common.mf           # stores vrep configuration (ip adress, max distance of VREPBase::move)
+   |    ├── env.mf              # stores vrep environment configuration (size, surface texture/type, etc)
+   |    ├── run.pl              # stores running configurations (number of agents, hosts, domains, etc)
    ├── src                  # store your source code files
    |    ├── algorithms          # store algorithms (non blocking piece of code)
    |    ├── filters             #
