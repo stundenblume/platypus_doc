@@ -40,4 +40,32 @@ After the project creation, we should create two algorithms ``producer`` and ``c
   
 After those commands your filesystem looks like:
 
+.. code-block:: bash
 
+   .
+   ├── bin                  
+   ├── sim                  
+   |    ├── agent_0.mf          
+   |    ├── common.mf           
+   |    ├── env.mf              
+   |    ├── run.pl              
+   ├── src                  
+   |    ├── controller.cpp          
+   |    ├── algorithms          
+   |    |    ├── consumer.h          
+   |    |    ├── consumer.cpp
+   |    |    ├── producer.h
+   |    |    ├── producer.cpp
+   |    ├── filters             
+   |    ├── platforms           
+   |    ├── threads             
+   |    ├── transports          
+   ├── action.bat           
+   ├── action.sh            
+   ├── using_gams.mpb            
+   ├── using_vrep.mpb
+   ├── using_ace.mpb
+   ├── using_madara.mpb
+   ├── workspace.mwc
+   └── README.txt           
+   
