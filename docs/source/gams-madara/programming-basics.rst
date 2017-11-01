@@ -41,8 +41,8 @@ With this command, you create a project named ``tutorial1``, which has the follo
    └── README.txt           # some how-to file with compile and run commands
  
  
- PRINTING INTO AGENT TERMINAL WINDOW
- -----------------------------------
+PRINTING INTO AGENT TERMINAL WINDOW
+-----------------------------------
  
  To print some message into Agent terminal window you can use the following command:
  
