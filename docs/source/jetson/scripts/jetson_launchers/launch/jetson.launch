@@ -1,0 +1,11 @@
+<launch>
+	<!-- GPS -->
+	<node name="adafruit_gps" pkg="nmea_navsat_driver" type="nmea_serial_driver" args="_port:=/dev/ttyUSB0 fix:=/gps/fix" />
+
+	<!-- IMU -->
+	<include file="$(find i2c_imu)/launch/i2c_imu_auto.launch" />
+
+	<!-- ZED -->
+	<include file="$(find zed_wrapper)/launch/zed.launch" />
+</launch>
+
