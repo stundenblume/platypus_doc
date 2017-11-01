@@ -17,7 +17,7 @@ To create a new GAMS project, you should use a linux script called ``gpc.pl``. S
 
 .. code-block:: bash
 
-  $GAMS_ROOT/scripts/projects/gpc.pl --path $PROJECT_ROOT/tutorial1
+  $GAMS_ROOT/scripts/projects/gpc.pl --path $PROJECT_HOME/tutorial1
   
 With this command, you create a project named ``tutorial1``, which has the following folder structure:
  
@@ -26,10 +26,10 @@ With this command, you create a project named ``tutorial1``, which has the follo
    .
    ├── bin                  # store binary files
    ├── sim                  # store simulation files
-   |    ├── agent_0.mf          #
-   |    ├── common.mf           #
-   |    ├── env.mf              #
-   |    ├── run.pl              #
+   |    ├── agent_0.mf          # stores vrep port number, starting location(lat,long, alt) and algorithm name
+   |    ├── common.mf           # stores vrep configuration (ip adress, max distance of VREPBase::move)
+   |    ├── env.mf              # stores vrep environment configuration (size, surface texture/type, etc)
+   |    ├── run.pl              # stores running configurations (number of agents, hosts, domains, etc)
    ├── src                  # store your source code files
    |    ├── algorithms          # store algorithms (non blocking piece of code)
    |    ├── filters             #
@@ -39,4 +39,43 @@ With this command, you create a project named ``tutorial1``, which has the follo
    ├── action.bat           # script to compile and run the project in Windows
    ├── action.sh            # script to compile and run the project in Linux
    └── README.txt           # some how-to file with compile and run commands
+ 
+CREATING ALGORITHMS
+-------------------
+
+You can create an algorithm (named as ``talker``) into your project (called ``tutorial3``) by running the following code:
+
+.. code-block:: bash
+
+  $GAMS_ROOT/scripts/projects/gpc.pl --new-algorithm talker --path $PROJECT_HOME/tutorial3
+  
+CREATING THREADS
+----------------
+
+You can create a thread (named as ``sense``) into your project (called ``tutorial3``) by running the following code:
+ 
+.. code-block:: bash
+
+  $GAMS_ROOT/scripts/projects/gpc.pl --new-thread sense
+ 
+ADDING MORE AGENTS INTO SIMULATION
+----------------------------------
+
+You can add more agents into simulation by running the following command into terminal:
+
+.. code-block:: bash
+
+  $GAMS_ROOT/scripts/projects/gpc.pl --agents 2 --randomize
+
+With this command, your simulation will have 2 agents, which will generate randomized coordinates (lat, long). These values is stored into ``agent_0.mf`` and ``agent_1.mf``,whose are located into ``sim`` folder.
+
+
+PRINTING INTO AGENT TERMINAL WINDOW
+-----------------------------------
+ 
+To print some message into Agent terminal window you can use the following command:
+ 
+  madara_logger_ptr_log (gams::loggers::global_logger.get (), gams::loggers::LOG_MAJOR, " My message is hello folks!");
+  
+ 
  
