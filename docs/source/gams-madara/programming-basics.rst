@@ -69,6 +69,7 @@ You can add more agents into simulation by running the following command into te
 
 With this command, your simulation will have 2 agents, which will generate randomized coordinates (lat, long). These values is stored into ``agent_0.mf`` and ``agent_1.mf``,whose are located into ``sim`` folder.
 
+
 Killing broken V-REP
 --------------------
 
@@ -87,4 +88,5 @@ To print some message into Agent terminal window you can use the following comma
   madara_logger_ptr_log (gams::loggers::global_logger.get (), gams::loggers::LOG_MAJOR, " My message is hello folks!");
   
  
- 
+
+
