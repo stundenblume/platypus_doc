@@ -18,6 +18,7 @@ At the end of ROS Quick Start tutorials, you will get a full understanding of RO
 .. toctree::
 
    GAMS/MADARA Background <background>
+   GAMS/MADARA Project manipulation <project-manipulation>
    GAMS/MADARA Programming Basics <programming-basics>
    GAMS/MADARA Compilation <compilation/index>
    GAMS/MADARA Simulation <simulation>
