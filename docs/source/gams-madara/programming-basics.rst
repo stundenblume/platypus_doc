@@ -29,8 +29,9 @@ As your first application, we going to create an application that one agent gene
 
 .. code-block:: bash
 
-  $GAMS_ROOT/scripts/projects/gpc.pl --path $PROJECT_HOME/tutorial1
-  
+  $GAMS_ROOT/scripts/projects/gpc.pl --path $PROJECT_HOME/tutorial1  
+
+
 After the project creation, we should create two algorithms ``producer`` and ``consumer``. This is done by running:
 
 .. code-block:: bash
