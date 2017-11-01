@@ -37,7 +37,8 @@ Summary
    source/jetson/index
    source/field-testing/index
    source/contributors/index
-
+   source/applications/index
+   source/eboard/index
 
 Disclaimer
 ----------
