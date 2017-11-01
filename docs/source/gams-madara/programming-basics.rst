@@ -17,7 +17,7 @@ To create a new GAMS project, you should use a linux script called ``gpc.pl``. S
 
 .. code-block:: bash
 
-  $GAMS_ROOT/scripts/projects/gpc.pl --path $PROJECT_ROOT/tutorial1
+  $GAMS_ROOT/scripts/projects/gpc.pl --path $PROJECT_HOME/tutorial1
   
 With this command, you create a project named ``tutorial1``, which has the following folder structure:
  
