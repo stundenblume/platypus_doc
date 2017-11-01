@@ -49,7 +49,7 @@ You can add more agents into simulation by running the following command into te
 
 .. code-block:: bash
 
-  $GAMS_ROOT/scripts/projects/gpc.pl --agents 5 --randomize
+  $GAMS_ROOT/scripts/projects/gpc.pl --agents 2 --randomize
 
 PRINTING INTO AGENT TERMINAL WINDOW
 -----------------------------------
