@@ -51,8 +51,8 @@ Summary
    Installing JetPack L4T <os-install>
    Setting Up the OS <setup-os>
    Installing ROS <ros>
-   Creating ROS launch to peripheral <ros_launch>
    Peripheral <peripheral/index>
+   Creating ROS launch to peripheral <ros_launch>
    Obstacle Detection <obstacles/index>
    Cloning and Restoring Image <image>
 
