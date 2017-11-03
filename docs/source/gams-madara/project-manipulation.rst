@@ -40,7 +40,7 @@ You can create an algorithm (named as ``talker``) into your project (called ``tu
 
 .. code-block:: bash
 
-  $GAMS_ROOT/scripts/projects/gpc.pl --new-algorithm talker --path $PROJECT_HOME/tutorial3
+  $GAMS_ROOT/scripts/projects/gpc.pl --new-algorithm talker --path $PROJECT_HOME/tutorial1
   
 Creating threads
 ----------------
@@ -71,3 +71,15 @@ Sometimes when you try to close your simulation, V-REP stops working. To fast ki
 .. code-block:: bash
 
   kill $(pgrep vrep)
+
+
+Creating plataforms
+-------------------
+
+To create plataforms in your projects, you should run the following command:
+
+.. code-block:: bash
+
+  $GAMS_ROOT/scripts/projects/gpc.pl --new-platform my_platform --path $PROJECT_HOME/tutorial1
+  
+  
