@@ -164,3 +164,19 @@ In your ``consumer.cpp``, we should relate the counter variable with madara::kno
 		madara_logger_ptr_log (gams::loggers::global_logger.get (), gams::loggers::LOG_MAJOR, " ----Now the counter is: %d", counter.to_integer());
 	  return 0;
 	}
+	
+After that, we should configure ``controller.cpp`` to share knowledge between the agents. You have to write the following commands:
+
+.. code-block::
+
+	// perform main logic of program
+	int main (int argc, char ** argv)
+	{
+	  settings.type = madara::transport::MULTICAST;
+	  settings.hosts.push_back("127.0.0.1:19906");
+	  settings.hosts.push_back("127.0.0.1:19907");
+	  
+	  ...
+	  
+	  
+in above lines, you are telling to MADARA that knowledge should be shared into two hosts (agents): the host located into IP 127.0.0.1 and at port 19906; and the host located into 127.0.0.1:19907. You can get  port number from agent file configuration located into folder ``sim`` (i.e. ``sim/agent_0.mf`` and ``sim/agent_1.mf``).
