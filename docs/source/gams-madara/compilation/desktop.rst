@@ -52,7 +52,7 @@ When the compilation finishes, you should see in folder you called the above scr
    ├── madara  
    └── vrep  
 
-Thus, scripting will show several environment variables to be configured in your to properly run and compile your gams/madara projects.
+Thus, scripting will show several environment variables to be configured to properly run and compile your gams/madara projects.
 
 .. code-block:: bash
 
