@@ -2,7 +2,7 @@
 Creating a ROS launch to peripheral
 ====================================
 
-Instead of running each launch command for each periferal, we create a ROS launch that loads all the packages in a single shot. The launch is created inside our `launch` folder of our package in the Catkin workspace. In order to create it, we first create a new package named `jetson_launchers` with the folder `launch` inside. Then we download the `jetson.launch` file to our folder and perform the `catkin_make` to compile our new package.
+Instead of running each launch command for each periferal, we create a ROS launch that loads all the packages in a single shot. The launch is created inside our ``launch`` folder of our package in the Catkin workspace. In order to create it, we first create a new package named ``jetson_launchers`` with the folder ``launch`` inside. Then we download the ``jetson.launch`` file to our folder and perform the ``catkin_make`` to compile our new package.
 
 .. code-block:: bash
 
@@ -15,7 +15,7 @@ Instead of running each launch command for each periferal, we create a ROS launc
    $ catkin_make
    $ catkin_make install
 
-These commands create a package named `jetson_launchers` with support to `rospy` and `roscpp`. In our package, our launch file loads GPS, IMU and ZED packages into memory and then you can access their ROS topics. If you do not want to download the `jetson.launch` file, go to `~/catkin_ws/src/jetson_launchers/launch/` folder and create a file named `jetson.launch`. In this file type:
+These commands create a package named ``jetson_launchers`` with support to ``rospy`` and ``roscpp``. In our package, our launch file loads GPS, IMU and ZED packages into memory and then you can access their ROS topics. If you do not want to download the ``jetson.launch`` file, go to ``~/catkin_ws/src/jetson_launchers/launch/`` folder and create a file named ``jetson.launch``. In this file type:
 
 .. code-block:: xml
 
@@ -30,7 +30,7 @@ These commands create a package named `jetson_launchers` with support to `rospy`
 	  <include file="$(find zed_wrapper)/launch/zed.launch" />
    </launch>
 
-You may edit the `package.xml` file, adding:
+You may edit the ``package.xml`` file, adding:
 
 .. code-block:: xml
    
