@@ -56,7 +56,7 @@ Technical details
 Installing GPS support in ROS
 ------------------------------
 
-In order to install Adafruit GPS package in ROS, go to the source folder in catkin workspace and clone `nmea_navsat_driver <http://wiki.ros.org/nmea_navsat_driver>`_ from github. Having cloned `nmea_navsat_driver`, compile the ROS package and it is ready to be launched.
+In order to install Adafruit GPS package in ROS, go to the source folder in catkin workspace and clone `nmea_navsat_driver <http://wiki.ros.org/nmea_navsat_driver>`_ from github. Having cloned ``nmea_navsat_driver``, compile the ROS package and it is ready to be launched.
 
 .. code-block:: bash
 
@@ -71,11 +71,11 @@ In order to install Adafruit GPS package in ROS, go to the source folder in catk
 Testing ROS Package
 -----------------------
 
-To test the ROS package for IMU, you should call the `nmea_serial_driver` from `nmea_navsat_driver` package, as:
+To test the ROS package for IMU, you should call the ``nmea_serial_driver`` from ``nmea_navsat_driver`` package, as:
 
 .. code-block:: bash
 
     $ rosrun nmea_navsat_driver nmea_serial_driver _port:=/dev/ttyUSB0 fix:=/gps/fix
 
-Now you can check whether the topic `/gps/fix` exists.
+Now you can check whether the topic ``/gps/fix`` exists.
 

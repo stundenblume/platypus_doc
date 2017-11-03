@@ -33,7 +33,7 @@ By default, Grinch kernel has compatible drivers to the TP Link chipset and allo
     $ chmod +x tk1_hotspot.sh
     $ ./tk1_hotspot.sh
 
-This script first download the `hostapd <https://packages.ubuntu.com/trusty/hostapd>`_, `udhcpd <https://packages.ubuntu.com/trusty/udhcpd>`_ and `dnsmasq <https://packages.ubuntu.com/search?keywords=dnsmasq&searchon=names>`_ packages. Next step, the script subscribes the `/etc/udhcpd.conf` file, adding the configuration to the new network, setting the range of IPs from ``192.168.2.100`` to ``192.168.2.200``. Thus, any device connected to the Jetson will have an IP between these values. The values changed in ``udhcpd.conf`` are:
+This script first download the `hostapd <https://packages.ubuntu.com/trusty/hostapd>`_, `udhcpd <https://packages.ubuntu.com/trusty/udhcpd>`_ and `dnsmasq <https://packages.ubuntu.com/search?keywords=dnsmasq&searchon=names>`_ packages. Next step, the script subscribes the ``/etc/udhcpd.conf`` file, adding the configuration to the new network, setting the range of IPs from ``192.168.2.100`` to ``192.168.2.200``. Thus, any device connected to the Jetson will have an IP between these values. The values changed in ``udhcpd.conf`` are:
 
 .. code-block:: bash
     start       192.168.2.100
@@ -47,13 +47,13 @@ This script first download the `hostapd <https://packages.ubuntu.com/trusty/host
     option subnet  255.255.255.0
     opt router  192.168.2.1
 
-Then, the script subscribes the `/etc/default/udhcpd`, by commenting the line: 
+Then, the script subscribes the ``/etc/default/udhcpd``, by commenting the line: 
 
 .. code-block:: bash
 
     # DHCPD_ENABLED="no"
 
-The script also download and insert the file `/etc/hostapd/hostapd.conf` containing the configuration to connect the network. In order to connect in Jetson's network we configure the file as:
+The script also download and insert the file ``/etc/hostapd/hostapd.conf`` containing the configuration to connect the network. In order to connect in Jetson's network we configure the file as:
 
 .. code-block:: bash
     

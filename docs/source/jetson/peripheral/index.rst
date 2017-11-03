@@ -1,5 +1,5 @@
 =============================================
-Hooking Up Peripherals to the Jeatson
+Hooking Up Peripherals to the Jetson
 =============================================
 
 This section shows how to add the following peripherals to the Jetson board.

@@ -46,7 +46,7 @@ In order to Download the version 1.2 of ZED ROS Wrapper from Github, copy the fo
    $ catkin_make
    $ source ./devel/setup.bash
 
-These commands will download and install the ZED Wrapper to ROS and compile the Catkin Workspace. It is important to note that the git checkout is performed on `f2a62b0`, which means the version v1.2.0 of the ROS Wrapper -- this version is compatible with the ZED SDK to Jetson TK1. 
+These commands will download and install the ZED Wrapper to ROS and compile the Catkin Workspace. It is important to note that the git checkout is performed on ``f2a62b0``, which means the version v1.2.0 of the ROS Wrapper -- this version is compatible with the ZED SDK to Jetson TK1. 
 
 
 Install ZED and ROS Wrapper from script
