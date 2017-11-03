@@ -60,7 +60,7 @@ Thus, scripting will show several environment variables to be configured in your
 	$ export ACE_ROOT=$HOME/ace/ACE_wrappers
 	$ export MADARA_ROOT=$HOME/madara
 	$ export GAMS_ROOT=$HOME/gams
-	$ export VREP_ROOT=/home/lsa/vrep
+	$ export VREP_ROOT=$HOME/vrep
 	$ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ACE_ROOT/lib:$MADARA_ROOT/lib:$GAMS_ROOT/lib:$VREP_ROOT
 	$ export PATH=$PATH:$ACE_ROOT/bin:$MADARA_ROOT/bin:$GAMS_ROOT/bin:
 	$ export CORES=4
