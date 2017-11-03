@@ -140,3 +140,27 @@ In your ``producer.cpp`` we should configure the counter variable to be handled 
 
 	  return 0;
 	}
+
+
+In your ``consumer.cpp``, we should relate the counter variable with madara::knowledge, so consumer will have access to updates made by producer. 
+
+.. code-block::
+
+	algorithms::consumer::consumer (
+	  madara::knowledge::KnowledgeBase * knowledge,
+	  gams::platforms::BasePlatform * platform,
+	  gams::variables::Sensors * sensors,
+	  gams::variables::Self * self,
+	  gams::variables::Agents * agents)
+	  : gams::algorithms::BaseAlgorithm (knowledge, platform, sensors, self, agents)
+	{
+	  status_.init_vars (*knowledge, "consumer", self->agent.prefix);
+	  status_.init_variable_values ();
+	  counter.set_name("counter", knowledge);
+	}
+
+	int algorithms::consumer::plan (void)
+	{
+		madara_logger_ptr_log (gams::loggers::global_logger.get (), gams::loggers::LOG_MAJOR, " ----Now the counter is: %d", counter.to_integer());
+	  return 0;
+	}
