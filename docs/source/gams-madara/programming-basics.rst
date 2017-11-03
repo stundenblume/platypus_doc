@@ -130,13 +130,13 @@ In your ``producer.cpp`` we should configure the counter variable to be handled 
 	{
 	  status_.init_vars (*knowledge, "producer", self->agent.prefix);
 	  status_.init_variable_values ();
-	  counter.set_name("counter", knowledge);
+	  counter.set_name("counter", *knowledge);
 	}
      
 	int algorithms::producer::plan (void)
 	{
 		counter += 1;
-		madara_logger_ptr_log (gams::loggers::global_logger.get (), gams::loggers::LOG_MAJOR, " ----Incrementing the to counter: %d", counter.to_integer());
+		madara_logger_ptr_log (gams::loggers::global_logger.get (), gams::loggers::LOG_MAJOR, "\n ----Incrementing the to counter: %d \n\n", counter.to_integer());
 
 	  return 0;
 	}
@@ -156,12 +156,12 @@ In your ``consumer.cpp``, we should relate the counter variable with madara::kno
 	{
 	  status_.init_vars (*knowledge, "consumer", self->agent.prefix);
 	  status_.init_variable_values ();
-	  counter.set_name("counter", knowledge);
+	  counter.set_name("counter", *knowledge);
 	}
 
 	int algorithms::consumer::plan (void)
 	{
-		madara_logger_ptr_log (gams::loggers::global_logger.get (), gams::loggers::LOG_MAJOR, " ----Now the counter is: %d", counter.to_integer());
+		madara_logger_ptr_log (gams::loggers::global_logger.get (), gams::loggers::LOG_MAJOR, "\n ----Now the counter is: %d \n\n", counter.to_integer());
 	  return 0;
 	}
 	
@@ -180,3 +180,13 @@ After that, we should configure ``controller.cpp`` to share knowledge between th
 	  
 	  
 in above lines, you are telling to MADARA that knowledge should be shared into two hosts (agents): the host located into IP 127.0.0.1 and at port 19906; and the host located into 127.0.0.1:19907. You can get  port number from agent file configuration located into folder ``sim`` (i.e. ``sim/agent_0.mf`` and ``sim/agent_1.mf``).
+
+
+We should compile and run the project by executing the following commands into bash:
+
+.. code-block:: bash
+
+	$ ./action compile-vrep
+	$ ./action vrep run
+
+
