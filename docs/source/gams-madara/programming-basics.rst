@@ -190,3 +190,10 @@ We should compile and run the project by executing the following commands into b
 	$ ./action vrep run
 
 
+
+You can get full source of this project by running the following command:
+
+.. code-block:: bash
+
+	https://github.com/marceloparavisi/gams_tutorials.git
+	
