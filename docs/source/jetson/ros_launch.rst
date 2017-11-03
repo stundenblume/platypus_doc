@@ -63,3 +63,14 @@ Finally, create a file `jetson.launch` inside `launch` folder with the content:
 	  <include file="$(find zed_wrapper)/launch/zed.launch" />
    </launch>
 
+In order to test, you should call the ROS launch by typing:
+
+.. code-block:: bash
+
+   $ roslaunch jetson_launchers jetson.launch
+
+To record the content of the topics, run the command:
+
+.. code-block:: bash
+
+   $ rosbag record /gps/fix /zed/left/image_raw_color /zed/right/image_raw_color /zed/odom /zed/depth/depth_registered /gps/fix /imu/data  -o /media/ubuntu/Card/<filename>.bag
