@@ -195,5 +195,5 @@ You can get full source of this project by running the following command:
 
 .. code-block:: bash
 
-	https://github.com/marceloparavisi/gams_tutorials.git
+	git clone https://github.com/marceloparavisi/gams_tutorials.git
 	
