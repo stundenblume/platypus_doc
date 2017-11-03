@@ -115,5 +115,28 @@ So, your file ``consumer.h`` will looks like:
 	
      ....
      
+
+In your ``producer.cpp`` we should configure the counter variable to be handled by madara::knowledge. So the file will looks like:
+
+.. code-block::
+
+	algorithms::producer::producer (
+	  madara::knowledge::KnowledgeBase * knowledge,
+	  gams::platforms::BasePlatform * platform,
+	  gams::variables::Sensors * sensors,
+	  gams::variables::Self * self,
+	  gams::variables::Agents * agents)
+	  : gams::algorithms::BaseAlgorithm (knowledge, platform, sensors, self, agents)
+	{
+	  status_.init_vars (*knowledge, "producer", self->agent.prefix);
+	  status_.init_variable_values ();
+	  counter.set_name("counter", knowledge);
+	}
      
-     
+	int algorithms::producer::plan (void)
+	{
+		counter += 1;
+		madara_logger_ptr_log (gams::loggers::global_logger.get (), gams::loggers::LOG_MAJOR, " ----Incrementing the to counter: %d", counter.to_integer());
+
+	  return 0;
+	}
