@@ -31,6 +31,7 @@ After the project creation, we should create two algorithms ``producer`` and ``c
 
 .. code-block:: bash
 
+  cd $PROJECT_HOME/tutorial1
   $GAMS_ROOT/scripts/projects/gpc.pl --new-algorithm producer --path $PROJECT_HOME/tutorial1
   $GAMS_ROOT/scripts/projects/gpc.pl --new-algorithm consumer --path $PROJECT_HOME/tutorial1
   
@@ -73,7 +74,7 @@ Now, we need add a second agent to our simulation, so we run the following comma
  
 With that, the folder ``sim`` will get updated by the addition of file ``agent_1.mf``.
  
-Finally, we have to configure the algorithm that each agent should run. Edit file ``agent_0.mf`` so the algorithm name be ``producer``:
+Finally, we have to configure the algorithm that each agent should run. Edit file ``agent_0.mf`` so the algorithm name be ``producer``. Inside of file ``agent_0.mf`` will look like:
  
 .. code-block::
  
@@ -84,3 +85,35 @@ Edit file ``agent_1.mf`` so the algorithm name be ``consumer``:
  .. code-block::
  
   agent.0.algorithm = "consumer";
+
+
+Now, we have to declare a variable ``counter`` (of type ``madara::knowledge::containers::Integer``) in ``producer.h`` and ``consumer.h``. 
+
+So, your file ``producer.h`` will looks like:
+
+.. code-block::
+
+   class producer : public gams::algorithms::BaseAlgorithm
+   {
+
+     protected:
+	    madara::knowledge::containers::Integer counter;
+	
+     ....
+     
+     
+
+So, your file ``consumer.h`` will looks like:
+
+.. code-block::
+
+   class consumer : public gams::algorithms::BaseAlgorithm
+   {
+
+     protected:
+	    madara::knowledge::containers::Integer counter;
+	
+     ....
+     
+     
+     
