@@ -89,7 +89,7 @@ If you get an error in ``JavaPlatform``, you should edit ``javaPlatForm.cpp`` an
 
 .. code-block:: c++
 
-int move (const pose::Position & position, double epsilon = 0.1) override;
+	int move (const pose::Position & position, double epsilon = 0.1) override;
 
 and looks this in ``JavaPlatform.cpp``:
 .. code-block:: c++
