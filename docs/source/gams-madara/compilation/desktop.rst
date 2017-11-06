@@ -85,7 +85,7 @@ To allow the java compilation, you should install JAVA JDK (suggested JAVA 8) an
 	$ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 	
 	
-If you get an error in ``JavaPlatform``, you should edit ``javaPlatForm.cpp`` and ``JavaPlatform.h`` so the signeture of JavaPlatform::move look likes this in ``JavaPlatform.h``:
+If you get an error in ``JavaPlatform``, you should edit ``javaPlatForm.cpp`` and ``JavaPlatform.h`` so the signature of JavaPlatform::move look likes this in ``JavaPlatform.h``:
 
 .. code-block:: c++
 
