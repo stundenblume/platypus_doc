@@ -92,6 +92,7 @@ If you get an error in ``JavaPlatform``, you should edit ``javaPlatForm.cpp`` an
 	int move (const pose::Position & position, double epsilon = 0.1) override;
 
 and looks this in ``JavaPlatform.cpp``:
+
 .. code-block:: c++
 
 	int gams::platforms::JavaPlatform::move (const pose::Position & position, double epsilon) 
