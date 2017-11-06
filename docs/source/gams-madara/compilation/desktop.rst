@@ -69,6 +69,8 @@ Thus, scripting will show several environment variables to be configured to prop
 	$ export SYSROOT=$NDK/sysroot
 	$ export PATH=$PATH:$VREP_ROOT
 
+NOTE: Do not combine several arguments into ``base_build.sh``, otherwise you will suffer with anomalous compilation effects.
+
 
 JAVA SUPPORT
 ------------
