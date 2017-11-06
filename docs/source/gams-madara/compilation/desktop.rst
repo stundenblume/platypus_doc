@@ -81,6 +81,18 @@ To allow the java compilation, you should install JAVA JDK (suggested JAVA 8) an
 	$ sudo apt-get update
 	$ sudo apt-get install oracle-java8-set-default
 	$ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+	
+	
+If you get an error in ``JavaPlatform``, you should edit ``javaPlatForm.cpp`` and ``JavaPlatform.h`` so the signeture of JavaPlatform::move look likes this in ``JavaPlatform.h``:
+
+.. code-block:: c++
+
+int move (const pose::Position & position, double epsilon = 0.1) override;
+
+and looks this in ``JavaPlatform.cpp``:
+.. code-block:: c++
+
+	int gams::platforms::JavaPlatform::move (const pose::Position & position, double epsilon) 
 
 
 ANDROID SUPPORT
