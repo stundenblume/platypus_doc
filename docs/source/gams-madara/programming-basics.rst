@@ -77,7 +77,7 @@ With that, the folder ``sim`` will get updated by the addition of file ``agent_1
 Finally, we have to configure the algorithm that each agent should run. Edit file ``agent_0.mf`` so the algorithm name be ``producer``. Inside of file ``agent_0.mf`` will look like:
  
 .. code-block::
- 
+
   agent.0.algorithm = "producer";
 
 Edit file ``agent_1.mf`` so the algorithm name be ``consumer``:
