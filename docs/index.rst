@@ -35,6 +35,7 @@ Summary
    source/gams-madara/index
    source/rpi/index
    source/jetson/index
+   source/boat/index
    source/field-testing/index
    source/contributors/index
    source/applications/index

@@ -40,7 +40,7 @@ And a window to create AVDs appears. On this window, select ``Create...`` and a 
 
 .. image:: images/create_avd.png
    :align: center
-   :width: 500pt
+   :width: 300pt
 
 Clicking in ``OK`` will create a AVD in your hard drive that you can access next time as the picture shows:
 
