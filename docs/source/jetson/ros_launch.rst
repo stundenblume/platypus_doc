@@ -40,7 +40,13 @@ You may edit the ``package.xml`` file, adding:
    <exec_depend>rospy</exec_depend>
 
 
-In order to test, you should call the ROS launch by typing:
+Before running the ROS launch, you should set the default language for output (in case it is not set yet). In order to do that, add to the ``.bashrc`` file the line:
+
+.. code-block:: bash
+
+   export LC_ALL="en_US.UTF-8"
+
+Finally, in order to test, you should call the ROS launch by typing:
 
 .. code-block:: bash
 

@@ -6,14 +6,15 @@ import sys
 import rosbag
 import numpy as np
 from cv_bridge import CvBridge
+from os.path import join, dirname, exists
 
 def extractor(bagname):
-    root_dir = "./%s" % bagname.split('.bag')[0]
-    left_dir = "%s/left" % root_dir
-    right_dir = "%s/right" % root_dir
-    depth_dir = "%s/depth" % root_dir
+    root_dir = dirname(bagname)
+    left_dir = join(root_dir, 'left')
+    right_dir = join(root_dir, 'right')
+    depth_dir = join(root_dir, 'depth')
     
-    if not (os.path.exists(root_dir)):
+    if not exists(root_dir):
         os.makedirs("%s" % left_dir)
         os.makedirs("%s" % right_dir)
         os.makedirs("%s" % depth_dir)
