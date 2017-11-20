@@ -20,7 +20,7 @@ where the MAPE process is mapped as:
   * Plan phase: algorithm plan;
   * Execute phase: algorithm execution.
   
-The possible values of PlatformAnalyzeStatus is:
+The possible values of PlatformAnalyzeStatus are:
    * UNKNOWN = 0,
    * OK  = 1,
    * WAITING = 2,
@@ -33,3 +33,14 @@ The possible values of PlatformAnalyzeStatus is:
    * SENSORS_AVAILABLE = 1024,
    * MOVEMENT_AVAILABLE = 2048
 
+
+The possible values of AlgorithmAnalyzeStatus are:
+    * UNKNOWN         = 0x00000000,
+    * OK              = 0x00000001,
+    * WAITING         = 0x00000002,
+    * DEADLOCKED      = 0x00000004,
+    * FAILED          = 0x00000008,
+    * FINISHED        = 0x00000010
+    
+    
+    
