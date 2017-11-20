@@ -20,4 +20,16 @@ where the MAPE process is mapped as:
   * Plan phase: algorithm plan;
   * Execute phase: algorithm execution.
   
-  
+The possible values of PlatformAnalyzeStatus is:
+* UNKNOWN = 0,
+* OK  = 1,
+* WAITING = 2,
+* DEADLOCKED = 4,
+* FAILED = 8,
+* MOVING = 16,
+* REDUCED_SENSING_AVAILABLE = 128,
+* REDUCED_MOVEMENT_AVAILABLE = 256,
+* COMMUNICATION_AVAILABLE = 512,
+* SENSORS_AVAILABLE = 1024,
+* MOVEMENT_AVAILABLE = 2048
+
