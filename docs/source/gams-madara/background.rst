@@ -37,12 +37,12 @@ The possible values of PlatformAnalyzeStatus are:
 
 The possible values of AlgorithmAnalyzeStatus are:
 
-    * UNKNOWN         = 0x00000000,
-    * OK              = 0x00000001,
-    * WAITING         = 0x00000002,
-    * DEADLOCKED      = 0x00000004,
-    * FAILED          = 0x00000008,
-    * FINISHED        = 0x00000010
+    ** UNKNOWN         = 0x00000000,
+    ** OK              = 0x00000001,
+    ** WAITING         = 0x00000002,
+    ** DEADLOCKED      = 0x00000004,
+    ** FAILED          = 0x00000008,
+    ** FINISHED        = 0x00000010
     
     
     
