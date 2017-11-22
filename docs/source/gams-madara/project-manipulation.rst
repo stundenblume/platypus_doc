@@ -83,3 +83,25 @@ To create plataforms in your projects, you should run the following command:
   $GAMS_ROOT/scripts/projects/gpc.pl --new-platform my_platform --path $PROJECT_HOME/tutorial1
   
   
+DEBUG LOG
+---------
+
+You can define the log level that will be printed into gams terminal by configuring the file ``sim/run.pl``:
+
+.. code-block:: bash
+  $madara_debug = 1;
+  $gams_debug = 3;
+  
+You can define the following values to log level:
+
+      LOG_EMERGENCY = 0,
+      LOG_ALWAYS = 0,
+      LOG_ERROR = 1,
+      LOG_WARNING = 2,
+      LOG_MAJOR = 3,
+      LOG_MINOR = 4,
+      LOG_TRACE = 5,
+      LOG_DETAILED = 6,
+      LOG_MAX = 6
+      
+      
