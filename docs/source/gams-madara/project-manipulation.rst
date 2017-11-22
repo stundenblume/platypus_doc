@@ -94,14 +94,14 @@ You can define the log level that will be printed into gams terminal by configur
   
 You can define the following values to log level:
 
-      LOG_EMERGENCY = 0,
-      LOG_ALWAYS = 0,
-      LOG_ERROR = 1,
-      LOG_WARNING = 2,
-      LOG_MAJOR = 3,
-      LOG_MINOR = 4,
-      LOG_TRACE = 5,
-      LOG_DETAILED = 6,
-      LOG_MAX = 6
+     * LOG_EMERGENCY = 0,
+     * LOG_ALWAYS = 0,
+     * LOG_ERROR = 1,
+     * LOG_WARNING = 2,
+     * LOG_MAJOR = 3,
+     * LOG_MINOR = 4,
+     * LOG_TRACE = 5,
+     * LOG_DETAILED = 6,
+     * LOG_MAX = 6
       
       
