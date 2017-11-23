@@ -91,7 +91,8 @@ Now, we have to declare a variable ``counter`` (of type ``madara::knowledge::con
 
 So, your file ``producer.h`` will looks like:
 
-```c++
+.. code-block:: bash
+
    class producer : public gams::algorithms::BaseAlgorithm
    {
 
@@ -99,7 +100,7 @@ So, your file ``producer.h`` will looks like:
 	    madara::knowledge::containers::Integer counter;
 	
      ....
-```
+
      
 
 So, your file ``consumer.h`` will looks like:
