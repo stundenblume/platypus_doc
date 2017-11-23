@@ -91,8 +91,7 @@ Now, we have to declare a variable ``counter`` (of type ``madara::knowledge::con
 
 So, your file ``producer.h`` will looks like:
 
-```
-
+```c++
    class producer : public gams::algorithms::BaseAlgorithm
    {
 
