@@ -76,13 +76,13 @@ With that, the folder ``sim`` will get updated by the addition of file ``agent_1
  
 Finally, we have to configure the algorithm that each agent should run. Edit file ``agent_0.mf`` so the algorithm name be ``producer``. Inside of file ``agent_0.mf`` will look like:
  
-.. code-block::
+.. code-block:: bash
 
   agent.0.algorithm = "producer";
 
 Edit file ``agent_1.mf`` so the algorithm name be ``consumer``:
 
- .. code-block::
+ .. code-block:: bash
  
   agent.0.algorithm = "consumer";
 
@@ -91,7 +91,7 @@ Now, we have to declare a variable ``counter`` (of type ``madara::knowledge::con
 
 So, your file ``producer.h`` will looks like:
 
-.. code-block::
+```
 
    class producer : public gams::algorithms::BaseAlgorithm
    {
@@ -100,7 +100,7 @@ So, your file ``producer.h`` will looks like:
 	    madara::knowledge::containers::Integer counter;
 	
      ....
-     
+```
      
 
 So, your file ``consumer.h`` will looks like:
