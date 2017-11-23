@@ -105,7 +105,7 @@ So, your file ``producer.h`` will looks like:
 
 So, your file ``consumer.h`` will looks like:
 
-.. code-block::
+.. code-block:: bash
 
    class consumer : public gams::algorithms::BaseAlgorithm
    {
@@ -118,7 +118,7 @@ So, your file ``consumer.h`` will looks like:
 
 In your ``producer.cpp`` we should configure the counter variable to be handled by madara::knowledge. So the file will looks like:
 
-.. code-block::
+.. code-block:: bash
 
 	algorithms::producer::producer (
 	  madara::knowledge::KnowledgeBase * knowledge,
@@ -144,7 +144,7 @@ In your ``producer.cpp`` we should configure the counter variable to be handled 
 
 In your ``consumer.cpp``, we should relate the counter variable with madara::knowledge, so consumer will have access to updates made by producer. 
 
-.. code-block::
+.. code-block:: bash
 
 	algorithms::consumer::consumer (
 	  madara::knowledge::KnowledgeBase * knowledge,
@@ -167,7 +167,7 @@ In your ``consumer.cpp``, we should relate the counter variable with madara::kno
 	
 After that, we should configure ``controller.cpp`` to share knowledge between the agents. You have to write the following commands:
 
-.. code-block::
+.. code-block:: bash
 
 	// perform main logic of program
 	int main (int argc, char ** argv)
