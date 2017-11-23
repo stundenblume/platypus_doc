@@ -27,6 +27,7 @@ With this command, you create a project named ``tutorial1``, which has the follo
    |    ├── algorithms          # store algorithms (non blocking piece of code)
    |    ├── filters             #
    |    ├── platforms           #
+   |    |    ├── threads        # store threads related to platforms
    |    ├── threads             # store algorithms (blocking piece of code)
    |    ├── transports          #
    ├── action.bat           # script to compile and run the project in Windows
@@ -42,14 +43,24 @@ You can create an algorithm (named as ``talker``) into your project (called ``tu
 
   $GAMS_ROOT/scripts/projects/gpc.pl --new-algorithm talker --path $PROJECT_HOME/tutorial1
   
-Creating threads
-----------------
+Creating threads (algorithms)
+-----------------------------
 
 You can create a thread (named as ``sense``) into your project (called ``tutorial3``) by running the following code:
  
 .. code-block:: bash
 
   $GAMS_ROOT/scripts/projects/gpc.pl --new-thread sense
+  
+  
+Creating threads (platforms)
+-----------------------------
+
+You can create a thread (named as ``pid``) into your project (called ``tutorial3``) by running the following code:
+ 
+.. code-block:: bash
+
+  $GAMS_ROOT/scripts/projects/gpc.pl --new-platform-thread pid
  
 Adding more agents into simulation
 ----------------------------------
