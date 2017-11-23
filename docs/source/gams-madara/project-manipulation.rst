@@ -46,7 +46,7 @@ You can create an algorithm (named as ``talker``) into your project (called ``tu
 Creating threads (algorithms)
 -----------------------------
 
-You can create a thread (named as ``sense``) into your project (called ``tutorial3``) by running the following code:
+You can create a thread (named as ``sense``) into your project (called ``tutorial3``) by running the following command inside your project's folder:
  
 .. code-block:: bash
 
@@ -56,7 +56,7 @@ You can create a thread (named as ``sense``) into your project (called ``tutoria
 Creating threads (platforms)
 -----------------------------
 
-You can create a thread (named as ``pid``) into your project (called ``tutorial3``) by running the following code:
+You can create a thread (named as ``pid``) into your project (called ``tutorial3``) by running the following command inside your project's folder:
  
 .. code-block:: bash
 
