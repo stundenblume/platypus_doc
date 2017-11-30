@@ -46,3 +46,18 @@ The possible values of AlgorithmAnalyzeStatus are:
     
     
     
+There is many algorithms to be used in GAMS/MADARA. 
+
+   * Formation coverage
+   * Prioritized Region Coverage
+   * Minimum Time Coverage
+   * Serpentine Coverage
+   * Waypoints
+   * Formation Follow
+   * Synchronized Formations
+   * Convoy Shielding
+   * Line Defense
+   * Arc Defense
+   * Onion Defense
+   * Executor
+
