@@ -6,9 +6,9 @@ Algorithms
 Waypoints
 ---------
 
-To use this kind of algorithm, you should configure some variables into knowledge system. To do that, you can write into agents configuration file the following lines:
+To use this kind of algorithm, you should configure some variables into knowledge system. To do that into agent 0 (zero), you can write into agent configuration file ``agent_0.mf`` the following lines:
 
-.. code::block: bash
+.. code-block:: bash
 
   agent.0.algorithm = "waypoints";
   agent.0.algorithm.args.locations.size=4;
