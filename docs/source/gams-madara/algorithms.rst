@@ -71,6 +71,13 @@ The ``type`` should be 0 (zero) to inform that the region polygon is convex. Now
   
 
 
+Snake Area Region Coverage
+--------------------------
+
+Limitations:
+  * only accepts gps frame type
+  * shift is constant (2.5 meters between parallel lines)
+
 
 Formation coverage
 Prioritized Region Coverage
