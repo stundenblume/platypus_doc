@@ -136,3 +136,25 @@ You should configure the variable ``initialized_`` to be true in the method ``ge
 	  }
 	}
 
+minor fixes: AlgorithmFactoryRepository.cpp
+-------------------------------------------
+
+You should change the following code from:
+
+.. code-block:: bash
+
+    add (aliases, new area_coverage::PriorityWeightedRandomAreaCoverageFactory ());
+
+    add (aliases, new area_coverage::SnakeAreaCoverageFactory ());
+
+to:
+
+.. code-block:: bash
+
+  add (aliases, new area_coverage::PriorityWeightedRandomAreaCoverageFactory ());
+
+    aliases.resize (2);
+    aliases[0] = "snake";
+    aliases[1] = "sac";
+
+    add (aliases, new area_coverage::SnakeAreaCoverageFactory ());
