@@ -121,6 +121,8 @@ After the process is over, ``../android_arm_tools`` should be automatically crea
 Minor fixes: UniformRandomEdgeCoverage
 -----------
 
+You should configure the variable ``initialized_`` to be true in the method ``generate_new_position``:
+
 
 .. code-block:: bash
 
