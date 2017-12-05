@@ -118,3 +118,19 @@ After the process is over, ``../android_arm_tools`` should be automatically crea
 
 
 
+Minor fixes: UniformRandomEdgeCoverage
+-----------
+
+
+.. code-block:: bash
+
+	void
+	gams::algorithms::area_coverage::UniformRandomEdgeCoverage::generate_new_position (void)
+	{
+	  if (platform_ && *platform_->get_platform_status ()->movement_available)
+	  {
+		....... 
+	    initialized_ = true;
+	  }
+	}
+
