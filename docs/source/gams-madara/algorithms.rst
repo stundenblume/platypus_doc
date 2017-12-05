@@ -63,9 +63,9 @@ while, in ``agent_0.mf`` you specify the area to covered by the agent:
   agent.0.algorithm.args.area="region.0";
 
 The ``object_type`` can assume the following values:
-  1 region
-  2 prioritized region
-  4 search area (set of regions)
+  1. region
+  2. prioritized region
+  4. search area (set of regions)
   
 
 
