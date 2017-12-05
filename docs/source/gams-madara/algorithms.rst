@@ -67,6 +67,8 @@ The ``object_type`` can assume the following values:
   * 2: prioritized region
   * 4: search area (set of regions)
   
+The ``type`` should be 0 (zero) to inform that the region polygon is convex. Nowadays, there isn't other types of polygon implemented.
+  
 
 
 
