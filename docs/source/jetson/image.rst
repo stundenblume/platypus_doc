@@ -58,7 +58,7 @@ In order to restore the image from the localhost to the Jetson, first you naviga
 
 .. code-block:: bash
     
-    $ cd TK1/Linux_for_Tegra_tk1/bootloader
+    $ cd TK1/Linux_for_Tegra_tk1/
 
 When in the correct folder, turn on the Jetson board in the *Recovery Mode* by powering down the device (in case Jetson is on), connecting the micro-USB cable in the recovery port and in the USB of the local host, pressing and holding the FORCE RECOVERY button while turning the board on. In order to check if Jetson is in *Recovery Mode*, in your localhost, run:
 
