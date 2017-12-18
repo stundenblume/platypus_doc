@@ -35,6 +35,25 @@ Catkin packages can be built as a standalone project, in the same way that norma
 This script creates a structure in the home folder with the root workspace set in ``/home/ubuntu/catkin_ws``. 
 
 
+Installing ``vision_opencv`` in ROS
+------------------------------------
+
+By default, ROS has support to native OpenCV. However, when trying to compile a C++ code with a calling to ``cv_bridge``, the following error 
+
+.. ERROR::
+   make[2]: *** No rule to make target `/usr/lib/arm-linux-gnueabihf/libopencv_videostab.so.2.4.8'.  Stop.
+
+
+In order to get rid of the error, we have to compile `vision_opencv <http://wiki.ros.org/vision_opencv>`_ in our Catkin workspace. Hence, the first step is to clone the Indigo version of ``vision_opencv`` into the ``catkin_ws/src`` folder. Then, we have to compile the workspace, by running:
+
+.. code-block:: bash
+
+   $ cd ~/catkin_ws/src
+   $ git clone https://github.com/ros-perception/vision_opencv.git
+   $ cd ..
+   $ catkin_make
+
+
 Testing ROS installation
 -------------------------
 
