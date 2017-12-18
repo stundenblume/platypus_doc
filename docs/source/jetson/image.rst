@@ -54,7 +54,7 @@ When running this command, an image of the Jetson board starts to be recorded in
 Restoring the system image to Jetson 
 --------------------------------------
 
-In order to restore the image from the localhost to the Jetson, first you navigate to the proper directory on the localhost to begin the process. Open a Terminal and go to the JetPack install directory (e.g., ``/home/roger/JetPack/``). From this folder, navigate to the ``bootloader`` folder with:
+In order to restore the image from the localhost to the Jetson, first you navigate to the proper directory on the localhost to begin the process. Open a Terminal and go to the JetPack install directory (e.g., ``/home/roger/JetPack/``). From this folder, navigate to the ``Linux_for_Tegra_tk1`` folder with:
 
 .. code-block:: bash
     
