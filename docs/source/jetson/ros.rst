@@ -36,7 +36,7 @@ This script creates a structure in the home folder with the root workspace set i
 
 
 Installing vision_opencv in ROS
-------------------------------------
+--------------------------------
 
 By default, ROS has support to native OpenCV. However, when trying to compile a C++ code with a call to ``cv_bridge``, the following error 
 
