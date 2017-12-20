@@ -71,7 +71,7 @@ GAMS support two types of coordinate systems: GPS and cartesian. Each coordinate
    gams::pose::GPSFrame gps_frame;
    gams::pose::Position gps_loc(gps_frame, 40, 20);
    gams::pose::CartesianFrame cartesian0(gloc);
-   gams::pose::position c_loc0(cartesian0, 1, 0);
+   gams::pose::position c_loc0(cartesian0, 1, 1);
    
 In the code above, to create a cartesian frame (named cartesian0) you have to define a position into the gps_frame. After that, you can create points in the cartesian frame, by informing the frame and location (1,0). They will look like this:
 
@@ -83,7 +83,7 @@ Also you can convert between the coodinate systems. For example, to convert the 
 
 .. code-block:: bash
 
-   gams::pose::Position c_loc2(cartesian0, 2, 0);
+   gams::pose::Position c_loc2(cartesian0, 2, 3);
    gams::pose::Position gps_loc2 = c_loc2.transform_to(gps_frame);
    
 Also, you can calc the distance between two points even if they are in different coordinate file system. The only restrition is their file systems be related.
