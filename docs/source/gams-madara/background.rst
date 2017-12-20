@@ -26,6 +26,10 @@ As can be seen in figure below, the variables are mapped to Knowledge Base by a 
 
 However, just set a variable is public does not guarantee that it will be delivered to other agents, you must configure the transport module, stating the type of message (unicast, multicast and Broadcast), the IP address and the port of each agent that should receive the information.
 
+.. image:: images/gams.png
+   :align: center
+   :width: 500pt
+
 Above, you can see GAMS diagram, which is build on top of MADARA middleware. GAMS heritage all characteristics. Algorithms developed by users are executed by ``Controller`` by running MAPE Loop. So, the main loop of GAMS can be resumed with following sequence diagram:
 
 .. image:: images/GamsRunLoop.png
