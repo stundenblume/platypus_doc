@@ -73,7 +73,7 @@ GAMS support two types of coordinate systems: GPS and cartesian. Each coordinate
    gams::pose::CartesianFrame cartesian0(gloc);
    gams::pose::position c_loc0(cartesian0, 1, 1);
    
-In the code above, to create a cartesian frame (named cartesian0) you have to define a position into the gps_frame. After that, you can create points in the cartesian frame, by informing the frame and location (1,0). They will look like this:
+In the code above, to create a cartesian frame (named cartesian0) you have to define a position into the gps_frame. After that, you can create a point in the cartesian frame, by informing location (1,1) in relation to gps_frame. They will look like this:
 
 .. image:: images/coordinateSystem.png
    :align: center
