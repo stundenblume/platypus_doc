@@ -69,7 +69,7 @@ GAMS support two types of coordinate systems: GPS and cartesian. Each coordinate
 .. code-block:: bash
 
    gams::pose::GPSFrame gps_frame;
-   gams::pose::Position gps_loc(gps_frame, 40, 0);
+   gams::pose::Position gps_loc(gps_frame, 40, 20);
    gams::pose::CartesianFrame cartesian0(gloc);
    gams::pose::position c_loc0(cartesian0, 1, 0);
    
