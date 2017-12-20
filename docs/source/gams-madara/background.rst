@@ -18,7 +18,7 @@ The transport block is responsible for transferring knowledges through the agent
 
 Thus, with the integration of threads, transport services and knowledge services, MADARA stands out by allowing the sharing of data between agents and within the agent itself. The data are distributed transparently to the programmer, ie that sets new values and MADARA responsibility by grouping them in UDP packets and decide the best time to send them over the network, which tends to improve use. In addition, each variable mapped on the basis of Knowledge already offers automatically critical region protection through mutexes hence the user can view and change the values in different threads without worry with racing conditions.
 
-As can be seen in figure below, the variables are mapped to Knowledge Base by a tuple: key and value. Each key must be unique and allows the programmer to identify a value stored in knowledge. The programmer can invoke explicit queries via the functions call, or you can tell that a variable of the type container is related to a specific key of the Knowledge Base. In the last case, whenever the value is updated, the variable will be automatically updated. The shape of the key has meaning and helps to identify if the value is private or, in case of being sent to other agents, it allows identifying who belongs to that value. Private variable keys begin with a dot, whereas a public variable of the number 4 agent must be prefixed with ´´agent.4.´´.
+As can be seen in figure below, the variables are mapped to Knowledge Base by a tuple: key and value. Each key must be unique and allows the programmer to identify a value stored in knowledge. The programmer can invoke explicit queries via the functions call, or you can tell that a variable of the type container is related to a specific key of the Knowledge Base. In the last case, whenever the value is updated, the variable will be automatically updated. The shape of the key has meaning and helps to identify if the value is private or, in case of being sent to other agents, it allows identifying who belongs to that value. Private variable keys begin with a dot, whereas a public variable of the number 4 agent must be prefixed with ``agent.4.``.
 
 .. image:: images/knowledgeBase.png
    :align: center
@@ -26,7 +26,7 @@ As can be seen in figure below, the variables are mapped to Knowledge Base by a 
 
 However, just set a variable is public does not guarantee that it will be delivered to other agents, you must configure the transport module, stating the type of message (unicast, multicast and Broadcast), the IP address and the port of each agent that should receive the information.
 
-
+Above, you can see GAMS diagram, which is build on top of MADARA middleware. GAMS heritage all characteristics. Algorithms developed by users are executed by ``Controller`` by running MAPE Loop, as can be observed in the image below.
 
 The main loop of GAMS can be resumed with following sequence diagram:
 
