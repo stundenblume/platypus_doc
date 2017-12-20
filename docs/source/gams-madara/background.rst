@@ -61,3 +61,29 @@ There is many algorithms to be used in GAMS/MADARA.
    * Onion Defense
    * Executor
 
+Coordinate systems
+------------------
+
+GAMS support two types of coordinate systems: GPS and cartesian. Each coordinate system can have a father, so you can create a tree of coordinate systems. For example, you can specify that you an cartesian coordinate system (named cartesian0) is child of a GPS frame by writing the following code:
+
+.. code-block:: bash
+
+   gams::pose::GPSFrame gps_frame;
+   gams::pose::Position gps_loc(gps_frame, 40, 0);
+   gams::pose::CartesianFrame cartesian0(gloc);
+   gams::pose::position cart_loc0(cartesian0, 1, 0);
+   
+In the code above, to create a cartesian frame (named cartesian0) you have to define a position into the gps_frame. After that, you can create points in the cartesian frame, by informing the frame and location (1,0).
+
+Also you can convert between the coodinate systems. For example, to convert the position (2,0) from cartesian frame (cartesian0) to gps_frame, you should write:
+
+.. code-block:: bash
+
+   gams::pose::Position cart_loc2(cartesian0, 2, 0);
+   gams::pose::Position gps_loc2 = cart_loc2.transform_to(gps_frame);
+   
+Also, you can calc the distance between two points even if they are in different coordinate file system. The only restrition is their file systems be related.
+
+.. code-block:: bash
+
+   double distance = gps_loc.distance_to(cart_loc2);
