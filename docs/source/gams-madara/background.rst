@@ -22,13 +22,13 @@ As can be seen in figure below, the variables are mapped to Knowledge Base by a 
 
 .. image:: images/knowledgeBase.png
    :align: center
-   :width: 200pt
+   :width: 150pt
 
 However, just set a variable is public does not guarantee that it will be delivered to other agents, you must configure the transport module, stating the type of message (unicast, multicast and Broadcast), the IP address and the port of each agent that should receive the information.
 
 .. image:: images/gams.png
    :align: center
-   :width: 300pt
+   :width: 400pt
 
 Above, you can see GAMS diagram, which is build on top of MADARA middleware. GAMS heritage all characteristics. Algorithms developed by users are executed by ``Controller`` by running MAPE Loop. So, the main loop of GAMS can be resumed with following sequence diagram:
 
@@ -102,7 +102,7 @@ In the code above, to create a cartesian frame (named cartesian0) you have to de
 
 .. image:: images/coordinateSystem.png
    :align: center
-   :width: 500pt
+   :width: 400pt
 
 Also you can convert between the coodinate systems. For example, to convert the position (2,0) from cartesian frame (cartesian0) to gps_frame, you should write:
 
