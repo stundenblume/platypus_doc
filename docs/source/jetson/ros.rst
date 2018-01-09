@@ -49,7 +49,9 @@ In order to get rid of the error, we have to compile `vision_opencv <http://wiki
 
    $ cd ~/catkin_ws/src
    $ git clone https://github.com/ros-perception/vision_opencv.git
-   $ cd ..
+   $ cd vision_opencv/
+   $ git checkout indigo
+   $ cd ../..
    $ catkin_make
 
 Next time you compile a C++ code that contains a call to ``cv_bridge``, no errors should appear.
