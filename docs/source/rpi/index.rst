@@ -12,7 +12,7 @@ Setting Up the Raspberry Pi
 
 .. toctree::
 
-   Installing the OS <os-install>
+   Image Handling <os-install>
    Setting Up the OS <setup-os>
    Installing ROS <ros>
    Installing GAMS/MADARA <gams-madara>
