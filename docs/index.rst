@@ -34,6 +34,7 @@ Summary
    source/ros/index
    source/gams-madara/index
    source/rpi/index
+   source/odroid/index
    source/jetson/index
    source/boat/index
    source/field-testing/index

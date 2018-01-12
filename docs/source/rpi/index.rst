@@ -1,11 +1,11 @@
 
 ===============
-Setting Up the Raspberry Pi
+Raspberry Pi
 ===============
 
 .. WARNING::
 
-  @ To be done by Renan
+  @ To be done by Renan, Amory
 
 
 
