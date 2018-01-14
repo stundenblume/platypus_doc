@@ -15,11 +15,8 @@ Download Image
 
 Oficial Ubuntu MATE 16.04 for Odroid XU4:
 
- * ``https://wiki.odroid.com/odroid-xu4/os_images/linux/start``
- * `<https://wiki.odroid.com/odroid-xu4/os_images/linux/start>`_
- * `https://wiki.odroid.com/odroid-xu4/os_images/linux/start<https://wiki.odroid.com/odroid-xu4/os_images/linux/start>`_
  * https://wiki.odroid.com/odroid-xu4/os_images/linux/start
- * ``https://odroid.in/ubuntu_16.04lts/``
+ * https://odroid.in/ubuntu_16.04lts/
 
 Unzip the Image file and go on to the next part.
 
@@ -28,8 +25,6 @@ Write the Image to the SDCard
 
 The procedure is the same compared to procedure for Raspberry Pi
 
- * :doc:`builds`
- * :ref:`our steps for webhook creation <webhook-creation>`
  * :ref:`Write the Image using Linux<burn-with-linux>`
  * :ref:`Write the Image using Windows<burn-with-windows>`
 
@@ -37,7 +32,7 @@ The procedure is the same compared to procedure for Raspberry Pi
 Load Image to the eMMC memory
 -----------------------------
 
-One of the nice features of Odroid XU4 is that it has the `eMMC memory module<http://www.hardkernel.com/main/products/prdt_info.php?g_code=G145628174287>`_.
+One of the nice features of Odroid XU4 is that it has the `eMMC memory module <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G145628174287>`_.
 According to them, the eMMC 5.0 storage is ~7x faster than the MicroSD Class-10 card in read tests.
 When using it, one can realise that the boot is clearly faster than SD cards.
 
@@ -48,7 +43,7 @@ Using eMMC Module Reader
 
 This method requires the `eMMC Module Reader <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G135415955758>`_
 
-.. image:: ./source/odroid/images/emmc-board.png
+.. image:: ./images/emmc-board.png
     :align: center
   
 Then, the procedure to write the Image is the same for SDCards.
@@ -83,8 +78,7 @@ However, it is transparant to the user.
 Backing up Image from the eMMC memory
 -----------------------------
 
-A similar procedure as described in the previous section can be used for backing up the Image in the eMMC module.
- :
+A similar procedure as described in the previous section can be used for backing up the Image in the eMMC module. Follow these steps:
 
   * Load the Image on a SDCard as described above
   * Set the memory Switch to select SDCard
@@ -101,7 +95,13 @@ Setting Up ROS
 -----------------------------
 
 There is no special procedure to install ROS dor Odroid. 
-Just follow the same procedure for :doc:`Raspberry Pi 3 </rpi/ros>`., using Ubuntu Mate 16.04.
+Just follow the same procedure for :doc:`Raspberry Pi 3 </rpi/ros>`, using Ubuntu Mate 16.04.
+
+:doc:`Raspberry Pi 3 1 <rpi/ros>`
+
+:doc:`Raspberry Pi 3 2 </rpi>`
+
+:doc:`Raspberry Pi 3 3 <rpi>`
 
 Setting Up GAMS/Madara
 -----------------------------

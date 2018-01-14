@@ -28,7 +28,7 @@ Unzip the Image file and go on to the next part.
 Write the Image using Windows
 ------------
 
- Use `Win32DiskImager<https://sourceforge.net/projects/win32diskimager/>` for writing and reading Image files.
+ Use `Win32DiskImager<https://sourceforge.net/projects/win32diskimager/>`_ for writing and reading Image files.
 
 .. _burn-with-linux:
 
@@ -60,11 +60,16 @@ Expand the Image Size to Match the SDCard Size
 
 For Raspberry Pi, execute 
 
+.. code:: bash
+
    $ sudo raspi-config
 
 and select 'Expand Filesystem'. 
 
 or, in the command line
+
+
+.. code:: bash
 
    $ sudo raspi-config --expand-rootfs
    $ sudo reboot
@@ -93,10 +98,16 @@ Shutdown the embedded computer, take the SDCard to a Linux PC computer and proce
 
 Open a Terminal instance and enter the following Linux command where the SDCard is mounted;
 
+
+.. code:: bash
+
    $ df -h
 
 
 Example:
+
+
+.. code:: bash
 
    $ df -h
    Filesystem                  Size  Used Avail Use% Mounted on
@@ -117,22 +128,37 @@ The last two are important: ``/dev/sdb1`` and ``/dev/sdb2``.
 
 Next we 'unmount', the Raspberry Pi SDcard:
 
+
+.. code:: bash
+
    $ sudo umount /dev/sdb1 /dev/sdb2
 
 Now we make a backup copy of the Raspberry Pi image.     
 
+
+.. code:: bash
+
    $ sudo dcfldd if=/dev/sdb of=~/MyImage.img
 
 If ``dcfldd`` is not installed, then install it and reexecute the last command.
+
+
+.. code:: bash
 
    $ sudo apt-get update
    $ sudo apt-get install dcfldd
 
 Next we use the sync command to force a synchronise of any outstanding input or output
 
+
+.. code:: bash
+
    $ sudo sync
 
 Let's take a look at the backed up image file. The file size  should match the SDCard size.
+
+
+.. code:: bash
 
    $ ls -lsah ~/MyImage.img
 
@@ -153,8 +179,13 @@ Fortunalty, there are some scripts that perform these steps automatically. I per
 - Take the SDcard from the embedded computer and mount it on the Linux PC computer
 - download the `PiShrink script <https://github.com/Drewsif/PiShrink>` and follow the instructions  
 
+
+.. code:: bash
+
    $ wget https://raw.githubusercontent.com/Drewsif/PiShrink/master/pishrink.sh
 
+
+.. code:: bash
 
    $ chmod +x ../pishrink.sh 
    ale@gaphl40:~/img$ sudo ../pishrink.sh image.img 
@@ -186,9 +217,13 @@ Generating checksum
 Finally, it is recommended to generate a checksum file for the image file.
 This is usefull to check whether the file was correcpted during some data transfer. 
 
+.. code:: bash
+
    $ md5sum image.img > image.md5
 
 It results in a text file like this one. Save this file with the image file.
+
+.. code:: bash
 
    $ cat image.md5 
    75e87507e672de53241df4d724a0aac4  image.img
