@@ -41,13 +41,19 @@ Execute `lsblk` or `df -l` to find out the mouting palce for the SDCard. It shou
 There are several programs to burn the SDcard. dd is most well known but there are newer options such as `ddrescue` or `dcfldd`.
 
 
-   $ sudo ddrescue -D --force ubuntu-mate-16.04.2-desktop-armhf-raspberry-pi.img /dev/sdx
+.. code:: bash
+
+   $ sudo ddrescue -D --force MyImage.img /dev/sdx
 
 
+.. code:: bash
 
    $ sudo dcfldd of=/dev/sdb if=~/MyImage.img
 
 Force a synchronise of any outstanding input or output, then the card will be safe to remove. 
+
+
+.. code:: bash
 
    $ sudo sync
 
@@ -172,12 +178,12 @@ Shrinking the Image file
 Let us assume the you used a 64GB SDcard to build your system. When you back it up, it will result in a 64GB image file, redardless the actual amount of space used in the SDcard. 
 It will not be possible to directly use this image file in a, for example, 16GB SDCard. Before it, you need to shirink the image file. 
 
-This process is not exactly simple. It involves several steps as described `here<http://www.aoakley.com/articles/2015-10-09-resizing-sd-images.php>`.
-Fortunalty, there are some scripts that perform these steps automatically. I personaly suggest this `script <https://github.com/qrti/shrink>`. To run it you need:
+This process is not exactly simple. It involves several steps as described `here<http://www.aoakley.com/articles/2015-10-09-resizing-sd-images.php>`_.
+Fortunalty, there are some scripts that perform these steps automatically. I personaly suggest this `script <https://github.com/Drewsif/PiShrink>`_. To run it you need:
 
 - A Linux PC computer or a Linux VM for windows users
 - Take the SDcard from the embedded computer and mount it on the Linux PC computer
-- download the `PiShrink script <https://github.com/Drewsif/PiShrink>` and follow the instructions  
+- download the `PiShrink script <https://github.com/Drewsif/PiShrink>`_ and follow the instructions
 
 
 .. code:: bash
@@ -188,7 +194,7 @@ Fortunalty, there are some scripts that perform these steps automatically. I per
 .. code:: bash
 
    $ chmod +x ../pishrink.sh 
-   ale@gaphl40:~/img$ sudo ../pishrink.sh image.img 
+   $ sudo ../pishrink.sh image.img
    [sudo] password for ale: 
    Creating new /etc/rc.local
    e2fsck 1.42.13 (17-May-2015)

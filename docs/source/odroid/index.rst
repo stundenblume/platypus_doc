@@ -1,6 +1,6 @@
 
 ======================
-Setting UP ODROID XU4
+ODROID XU4
 ======================
 
 
@@ -102,6 +102,10 @@ Just follow the same procedure for :doc:`Raspberry Pi 3 </rpi/ros>`, using Ubunt
 :doc:`Raspberry Pi 3 2 </rpi>`
 
 :doc:`Raspberry Pi 3 3 <rpi>`
+
+:doc:`Raspberry Pi 3 4 <source/rpi>`
+
+:doc:`Raspberry Pi 3 5 <source>`
 
 Setting Up GAMS/Madara
 -----------------------------
