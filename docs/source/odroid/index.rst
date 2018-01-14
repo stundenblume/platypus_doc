@@ -13,40 +13,50 @@ Setting UP ODROID XU4
 Download Image 
 -----------------------------
 
-Oficial Ubuntu MATE 16.04 for Odroid XU4
+Oficial Ubuntu MATE 16.04 for Odroid XU4:
+
  * ``https://wiki.odroid.com/odroid-xu4/os_images/linux/start``
+ * `<https://wiki.odroid.com/odroid-xu4/os_images/linux/start>`_
+ * `https://wiki.odroid.com/odroid-xu4/os_images/linux/start<https://wiki.odroid.com/odroid-xu4/os_images/linux/start>`_
+ * https://wiki.odroid.com/odroid-xu4/os_images/linux/start
  * ``https://odroid.in/ubuntu_16.04lts/``
 
 Unzip the Image file and go on to the next part.
 
-Load Image to the SDCard
+Write the Image to the SDCard
 -----------------------------
 
 The procedure is the same compared to procedure for Raspberry Pi
 
  * :doc:`builds`
  * :ref:`our steps for webhook creation <webhook-creation>`
- * Burn the Image using Linux
- * Burn the Image using Windows
+ * :ref:`Write the Image using Linux<burn-with-linux>`
+ * :ref:`Write the Image using Windows<burn-with-windows>`
 
 
 Load Image to the eMMC memory
 -----------------------------
 
-One of the nice features of Odroid XU4 is that it has the eMMC memory module.
-http://www.hardkernel.com/main/products/prdt_info.php?g_code=G145628174287
+One of the nice features of Odroid XU4 is that it has the `eMMC memory module<http://www.hardkernel.com/main/products/prdt_info.php?g_code=G145628174287>`_.
 According to them, the eMMC 5.0 storage is ~7x faster than the MicroSD Class-10 card in read tests.
-By using it, one can realise that the boot is clearly faster than SD cards. 
+When using it, one can realise that the boot is clearly faster than SD cards.
 
-There are two ways to load eMMC memory:
-- using the `eMMC Module Reader <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G135415955758>`_
+There are two ways to load eMMC memory, depending whether the eMMC Module Reader is available or not.
 
-.. image:: ./source/odroid/images/emmc-reader.png
+Using eMMC Module Reader
+~~~~~~~
+
+This method requires the `eMMC Module Reader <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G135415955758>`_
+
+.. image:: ./source/odroid/images/emmc-board.png
     :align: center
   
-Then the procedure is the same for SDCards, but it requires the Reader.
+Then, the procedure to write the Image is the same for SDCards.
   
-- Or, the the Reader is not available, one can follow these steps
+Using Odroid and SDCard
+~~~~~~~
+
+If the Reader is not available, one can follow these steps:
 
   * Load the Image on a SDCard as described above
   * Set the memory Switch to select SDCard
@@ -74,59 +84,58 @@ Backing up Image from the eMMC memory
 -----------------------------
 
 A similar procedure as described in the previous section can be used for backing up the Image in the eMMC module.
-Just plug and external hard drive (USB3) to receive the .img file. Plug a Image 
-Dont 
+ :
 
   * Load the Image on a SDCard as described above
   * Set the memory Switch to select SDCard
   * Turn the system on and boot the system
-  * Plug in the USB3 interface a external drive with the Image file
+  * Plug in the USB3 interface an external drive where the Image file will be saved
   * Find out the mounting point for the eMMC module, which is most probably ``/dev/mmcblk1``
   * Go to the directory where the Image file will be saved and
   * Execute: ``sudo dcfldd if=/dev/mmcblk1 of=./MyImage.img``
 
-Done! Now it is recommended to shrink the Image file as described in :ref:`our steps for webhook creation <webhook-creation>`.
-
+Done! Now it is recommended to :ref:`shrink the Image file <shrinking-image>`.
+For more information about loading Image, refer to :ref:`Raspberry Pi 3 procedure<reading-image>`.
 
 Setting Up ROS
 -----------------------------
 
 There is no special procedure to install ROS dor Odroid. 
-Just follow the same procedure for :ref:`Raspberry Pi 3 <webhook-creation>`., using Ubuntu Mate 16.04.
+Just follow the same procedure for :doc:`Raspberry Pi 3 </rpi/ros>`., using Ubuntu Mate 16.04.
 
 Setting Up GAMS/Madara
 -----------------------------
 
 There is no special procedure to install GAMS/Madara dor Odroid. 
-Just follow the same procedure for :ref:`Raspberry Pi 3 <webhook-creation>`., using Ubuntu Mate 16.04.
+Just follow the same procedure for :ref:`Raspberry Pi 3 </gams-madara/compilation/index>`., using Ubuntu Mate 16.04.
 
 
 Setting Up Peripherals
 -----------------------------
 
-GPS
+`GPS<http://www.hardkernel.com/main/products/prdt_info.php?g_code=G142502154078>`_
 ~~~~~~~~~~~
 
-http://www.hardkernel.com/main/products/prdt_info.php?g_code=G142502154078
+describe here how to install GPS drivers.
 
 
-oCam-1MGN-U : Global Shutter
+`oCam-1MGN-U : Global Shutter<http://www.hardkernel.com/main/products/prdt_info.php?g_code=G147245683619>`_
 ~~~~~~~~~~~
 
-http://www.hardkernel.com/main/products/prdt_info.php?g_code=G147245683619
+describe here how to install camera.
+
 
 Wifi
 ~~~~~~~~~~~
 
-The recommended wifi dongle is called Wifi module 3 because it has deattachable antenna
-
-http://www.hardkernel.com/main/products/prdt_info.php?g_code=G137447734369
+The recommended wifi dongle is called `Wifi module 3<http://www.hardkernel.com/main/products/prdt_info.php?g_code=G137447734369>`_ because it has deattachable antenna
 
 It works out of the box for Ubuntu Mate. No further installation or configuration is required.
 
 
-USB IO Board
+`USB IO Board<http://www.hardkernel.com/main/products/prdt_info.php?g_code=G135390529643>`_
 ~~~~~~~~~~~
 
-http://www.hardkernel.com/main/products/prdt_info.php?g_code=G135390529643
+describe here how to install and use the IO board.
+
 

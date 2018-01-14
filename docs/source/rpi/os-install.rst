@@ -23,11 +23,14 @@ https://odroid.in/ubuntu_16.04lts/
 
 Unzip the Image file and go on to the next part.
 
+.. _burn-with-windows:
+
 Write the Image using Windows
 ------------
 
  Use `Win32DiskImager<https://sourceforge.net/projects/win32diskimager/>` for writing and reading Image files.
 
+.. _burn-with-linux:
 
 Write the Image using Linux
 ------------
@@ -81,6 +84,8 @@ Once your embedded computer is fully configured, it is a good ideia to:
 - backup the SDCard using minimal size, i.e. shrinking the Image file
 
 
+.. _reading-image:
+
 Reading the Image file
 ~~~~~~~~~~~~~~~
 
@@ -133,6 +138,7 @@ Let's take a look at the backed up image file. The file size  should match the S
 
 That's all !
 
+.. _shrinking-image:
 
 Shrinking the Image file
 ~~~~~~~~~~~~~~~

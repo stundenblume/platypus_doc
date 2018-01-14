@@ -21,6 +21,10 @@ How to install the driver and its depedencies
 - how to install software depedencies and drivers the required
 - provide a script to install it all at once
 
+http://cudamusing.blogspot.com.br/2015/11/building-tensorflow-for-jetson-tk1.html
+https://github.com/samjabrahams/tensorflow-on-raspberry-pi
+
+
 Known limitations
 -----------------------------
 
