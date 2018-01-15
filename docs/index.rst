@@ -14,14 +14,11 @@ About the Boats
     :align: center
 
 
-talk a little bit about the boats and the purpose of this document.
-
-show some youtube video of the boats in action.
-
-Autonomous Systems Laboratoty - PUCRS
+Autonomous Systems Laboratory - PUCRS
 --------------------------------------
 
-talk about LSA, link to the webpage
+This documment written by `LSA <https://lsa-pucrs.github.io/>`_ describes the procedure to configure and use Platypus boats.
+LSA has three boats: two airboats and a prop boat. They are used for water monitoring and disaster mitigation applications.
 
 
 Summary
@@ -47,7 +44,7 @@ Disclaimer
 
 The purpose of this document is for the use of LSA group only, but we open it in case it can be usefull for someone else.
 Thus, we dont fill obliged to give any technical support, although we might help in some special situations.
-In addition, we are not associated with Platypus LLC. 
+In addition, we are not associated with `Platypus LLC <http://senseplatypus.com/>`_.
 
 Everything you find here is without absolutly no waranty and I'm not responsible for any inconveniences or issues that might occurs. 
 

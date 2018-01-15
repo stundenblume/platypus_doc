@@ -83,7 +83,7 @@ or, in the command line
 For other embedded computers (e.g. ODroid), execute: 
 
 
-.. note:: describ here how to expand the Image on Odroid
+.. note:: describe here how to expand the Image on Odroid
 
 
 Backing Up an Image File

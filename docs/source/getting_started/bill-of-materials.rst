@@ -10,6 +10,9 @@ Bill of Materials for the Boats
 ==============================
 
 
+.. note:: place here all the accessory/payload for the boats
+
+
 Mandatory Resources
 -----------------------------
 
