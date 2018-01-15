@@ -120,19 +120,19 @@ Setting Up Peripherals
 GPS
 ~~~~~~~~~~~
 
-describe here how to install `GPS<http://www.hardkernel.com/main/products/prdt_info.php?g_code=G142502154078>`_ drivers.
+describe here how to install `GPS <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G142502154078>`_ drivers.
 
 
 oCam-1MGN-U Global Shutter
 ~~~~~~~~~~~
 
-describe here how to install the `oCam-1MGN-U Global Shutter<http://www.hardkernel.com/main/products/prdt_info.php?g_code=G147245683619>`_ camera.
+describe here how to install the `oCam-1MGN-U Global Shutter <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G147245683619>`_ camera.
 
 
 Wifi
 ~~~~~~~~~~~
 
-The recommended wifi dongle is called `Wifi module 3<http://www.hardkernel.com/main/products/prdt_info.php?g_code=G137447734369>`_ because it has deattachable antenna
+The recommended wifi dongle is called `Wifi module 3 <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G137447734369>`_ because it has deattachable antenna
 
 It works out of the box for Ubuntu Mate. No further installation or configuration is required.
 
@@ -140,6 +140,6 @@ It works out of the box for Ubuntu Mate. No further installation or configuratio
 USB IO Board
 ~~~~~~~~~~~
 
-describe here how to install and use the `USB IO Board<http://www.hardkernel.com/main/products/prdt_info.php?g_code=G135390529643>`_.
+describe here how to install and use the `USB IO Board <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G135390529643>`_.
 
 
