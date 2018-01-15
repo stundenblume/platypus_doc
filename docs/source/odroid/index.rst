@@ -101,7 +101,7 @@ Setting Up GAMS/Madara
 -----------------------------
 
 There is no special procedure to install GAMS/Madara dor Odroid. 
-Just follow the same procedure for :ref:`Raspberry Pi 3 <gams-rpi>`., using Ubuntu Mate 16.04.
+Just follow the same procedure for :ref:`Raspberry Pi 3 <gams-rpi>`, using Ubuntu Mate 16.04.
 
 
 Setting Up Peripherals
