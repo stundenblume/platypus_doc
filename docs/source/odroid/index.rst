@@ -29,7 +29,7 @@ The procedure is the same compared to procedure for Raspberry Pi
  * :ref:`Write the Image using Windows<burn-with-windows>`
 
 
-Load Image to the eMMC memory
+Write the Image to the eMMC memory
 -----------------------------
 
 One of the nice features of Odroid XU4 is that it has the `eMMC memory module <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G145628174287>`_.
@@ -43,7 +43,7 @@ Using eMMC Module Reader
 
 This method requires the `eMMC Module Reader <http://www.hardkernel.com/main/products/prdt_info.php?g_code=G135415955758>`_
 
-.. image:: ./images/emmc-board.png
+.. image:: ./images/emmc-board.jpg
     :align: center
   
 Then, the procedure to write the Image is the same for SDCards.
@@ -117,16 +117,16 @@ Just follow the same procedure for :ref:`Raspberry Pi 3 </gams-madara/compilatio
 Setting Up Peripherals
 -----------------------------
 
-`GPS<http://www.hardkernel.com/main/products/prdt_info.php?g_code=G142502154078>`_
+GPS
 ~~~~~~~~~~~
 
-describe here how to install GPS drivers.
+describe here how to install `GPS<http://www.hardkernel.com/main/products/prdt_info.php?g_code=G142502154078>`_ drivers.
 
 
-`oCam-1MGN-U : Global Shutter<http://www.hardkernel.com/main/products/prdt_info.php?g_code=G147245683619>`_
+oCam-1MGN-U Global Shutter
 ~~~~~~~~~~~
 
-describe here how to install camera.
+describe here how to install the `oCam-1MGN-U Global Shutter<http://www.hardkernel.com/main/products/prdt_info.php?g_code=G147245683619>`_ camera.
 
 
 Wifi
@@ -137,9 +137,9 @@ The recommended wifi dongle is called `Wifi module 3<http://www.hardkernel.com/m
 It works out of the box for Ubuntu Mate. No further installation or configuration is required.
 
 
-`USB IO Board<http://www.hardkernel.com/main/products/prdt_info.php?g_code=G135390529643>`_
+USB IO Board
 ~~~~~~~~~~~
 
-describe here how to install and use the IO board.
+describe here how to install and use the `USB IO Board<http://www.hardkernel.com/main/products/prdt_info.php?g_code=G135390529643>`_.
 
 

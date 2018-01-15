@@ -35,10 +35,10 @@ Write the Image using Windows
 Write the Image using Linux
 ------------
 
-Execute `lsblk` or `df -l` to find out the mouting palce for the SDCard. It should be `/dev/sdX`, most probably `/dev/sdb` if your computer has only one disk.
+Execute ``lsblk`` or ``df -l`` to find out the mouting palce for the SDCard. It should be ``/dev/sdX``, most probably ``/dev/sdb`` if your computer has only one disk.
 
 
-There are several programs to burn the SDcard. dd is most well known but there are newer options such as `ddrescue` or `dcfldd`.
+There are several programs to burn the SDcard. dd is most well known but there are newer options such as ``ddrescue`` or ``dcfldd``.
 
 
 .. code:: bash
@@ -132,7 +132,7 @@ Example:
 The last two are important: ``/dev/sdb1`` and ``/dev/sdb2``.
 
 
-Next we 'unmount', the Raspberry Pi SDcard:
+Next we `unmount`, the Raspberry Pi SDcard:
 
 
 .. code:: bash
@@ -178,7 +178,7 @@ Shrinking the Image file
 Let us assume the you used a 64GB SDcard to build your system. When you back it up, it will result in a 64GB image file, redardless the actual amount of space used in the SDcard. 
 It will not be possible to directly use this image file in a, for example, 16GB SDCard. Before it, you need to shirink the image file. 
 
-This process is not exactly simple. It involves several steps as described `here<http://www.aoakley.com/articles/2015-10-09-resizing-sd-images.php>`_.
+This process is not exactly simple. It involves several steps as described `here <http://www.aoakley.com/articles/2015-10-09-resizing-sd-images.php>`_.
 Fortunalty, there are some scripts that perform these steps automatically. I personaly suggest this `script <https://github.com/Drewsif/PiShrink>`_. To run it you need:
 
 - A Linux PC computer or a Linux VM for windows users
