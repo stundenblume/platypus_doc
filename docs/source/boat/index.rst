@@ -8,4 +8,5 @@ Here we describe the settings to perform on the boat in order to test it in the 
 .. toctree::
 
    Configure Tablet Emulator <emulator>
+   The Platypu`s EBoard <eboard>
 

@@ -16,5 +16,5 @@ Hardware Description
 Installing the Firmware
 --------------------
 
-Testing 
+Testing
 -----------
