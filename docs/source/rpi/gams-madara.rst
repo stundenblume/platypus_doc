@@ -1,3 +1,4 @@
+.. _gams-rpi:
 
 =============================================
 Installing GAMS/MADARA to the Raspberry Pi

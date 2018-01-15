@@ -89,31 +89,19 @@ A similar procedure as described in the previous section can be used for backing
   * Execute: ``sudo dcfldd if=/dev/mmcblk1 of=./MyImage.img``
 
 Done! Now it is recommended to :ref:`shrink the Image file <shrinking-image>`.
-For more information about loading Image, refer to :ref:`Raspberry Pi 3 procedure<reading-image>`.
+For more information about loading Image, refer to :ref:`Raspberry Pi 3 procedure <reading-image>`.
 
 Setting Up ROS
 -----------------------------
 
 There is no special procedure to install ROS dor Odroid. 
-Just follow the same procedure for :doc:`Raspberry Pi 3 </rpi/ros>`, using Ubuntu Mate 16.04.
-
-:doc:`Raspberry Pi 3 1 <rpi/ros>`
-
-:doc:`Raspberry Pi 3 2 </rpi>`
-
-:doc:`Raspberry Pi 3 3 <rpi>`
-
-:doc:`Raspberry Pi 3 4 <source/rpi>`
-
-:doc:`Raspberry Pi 3 5 <source>`
-
-:doc:`Raspberry Pi 3 5 </source>`
+Just follow the same procedure for :ref:`Raspberry Pi 3 <ros-rpi>`, using Ubuntu Mate 16.04.
 
 Setting Up GAMS/Madara
 -----------------------------
 
 There is no special procedure to install GAMS/Madara dor Odroid. 
-Just follow the same procedure for :ref:`Raspberry Pi 3 </gams-madara/compilation/index>`., using Ubuntu Mate 16.04.
+Just follow the same procedure for :ref:`Raspberry Pi 3 <gams-rpi>`., using Ubuntu Mate 16.04.
 
 
 Setting Up Peripherals
