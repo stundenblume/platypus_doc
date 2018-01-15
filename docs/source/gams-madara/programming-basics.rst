@@ -11,10 +11,10 @@ Printing into agent terminal window
 -----------------------------------
  
 To print some message into Agent terminal window you can use the following command:
- 
+
+.. code-block:: bash
+
   madara_logger_ptr_log (gams::loggers::global_logger.get (), gams::loggers::LOG_MAJOR, " My message is hello folks!");
-  
- 
 
 
 Creating an consumer/producer application
@@ -76,13 +76,13 @@ With that, the folder ``sim`` will get updated by the addition of file ``agent_1
  
 Finally, we have to configure the algorithm that each agent should run. Edit file ``agent_0.mf`` so the algorithm name be ``producer``. Inside of file ``agent_0.mf`` will look like:
  
-.. code-block:: bash
+.. code-block:: cpp
 
   agent.0.algorithm = "producer";
 
 Edit file ``agent_1.mf`` so the algorithm name be ``consumer``:
 
- .. code-block:: bash
+.. code-block:: cpp
  
   agent.0.algorithm = "consumer";
 
@@ -91,7 +91,7 @@ Now, we have to declare a variable ``counter`` (of type ``madara::knowledge::con
 
 So, your file ``producer.h`` will looks like:
 
-.. code-block:: bash
+.. code-block:: cpp
 
    class producer : public gams::algorithms::BaseAlgorithm
    {
@@ -105,7 +105,7 @@ So, your file ``producer.h`` will looks like:
 
 So, your file ``consumer.h`` will looks like:
 
-.. code-block:: bash
+.. code-block:: cpp
 
    class consumer : public gams::algorithms::BaseAlgorithm
    {
@@ -118,7 +118,7 @@ So, your file ``consumer.h`` will looks like:
 
 In your ``producer.cpp`` we should configure the counter variable to be handled by madara::knowledge. So the file will looks like:
 
-.. code-block:: bash
+.. code-block:: cpp
 
 	algorithms::producer::producer (
 	  madara::knowledge::KnowledgeBase * knowledge,
@@ -144,7 +144,7 @@ In your ``producer.cpp`` we should configure the counter variable to be handled 
 
 In your ``consumer.cpp``, we should relate the counter variable with madara::knowledge, so consumer will have access to updates made by producer. 
 
-.. code-block:: bash
+.. code-block:: cpp
 
 	algorithms::consumer::consumer (
 	  madara::knowledge::KnowledgeBase * knowledge,
@@ -167,7 +167,7 @@ In your ``consumer.cpp``, we should relate the counter variable with madara::kno
 	
 After that, we should configure ``controller.cpp`` to share knowledge between the agents. You have to write the following commands:
 
-.. code-block:: bash
+.. code-block:: cpp
 
 	// perform main logic of program
 	int main (int argc, char ** argv)

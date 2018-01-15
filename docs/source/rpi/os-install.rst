@@ -28,7 +28,7 @@ Unzip the Image file and go on to the next part.
 Write the Image using Windows
 ------------
 
- Use `Win32DiskImager<https://sourceforge.net/projects/win32diskimager/>`_ for writing and reading Image files.
+ Use `Win32DiskImager <https://sourceforge.net/projects/win32diskimager/>`_ for writing and reading Image files.
 
 .. _burn-with-linux:
 
@@ -83,7 +83,7 @@ or, in the command line
 For other embedded computers (e.g. ODroid), execute: 
 
 
-TO BE DONE
+.. note:: describ here how to expand the Image on Odroid
 
 
 Backing Up an Image File

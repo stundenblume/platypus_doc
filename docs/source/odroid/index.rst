@@ -107,6 +107,8 @@ Just follow the same procedure for :doc:`Raspberry Pi 3 </rpi/ros>`, using Ubunt
 
 :doc:`Raspberry Pi 3 5 <source>`
 
+:doc:`Raspberry Pi 3 5 </source>`
+
 Setting Up GAMS/Madara
 -----------------------------
 
