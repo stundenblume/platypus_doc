@@ -94,7 +94,7 @@ Next, download and update the ``sysctl.conf`` file, which only uncomment the lin
 Syncronizing clocks in Jetson TK1
 ----------------------------------
 
-As Jetson does not have an internal battery, every time it is turned off, the clock returns to `Wed, Dec 31 1969`. As we record bags using timestamp, it is important to keep the clock updated. Here, we detail how to configure the server machine (laptop) and the client machine (Jetson) in order to syncronize both clocks. It is expected that the server clock is correct/updated. We separate the explanation in two parts: the server machine and the client machine.
+As Jetson does not have an internal battery, every time it is turned off, the clock returns to ``Wed, Dec 31 1969``. As we record bags using timestamp, it is important to keep the clock updated. Here, we detail how to configure the server machine (laptop) and the client machine (Jetson) in order to syncronize both clocks. It is expected that the server clock is correct/updated. We separate the explanation in two parts: the server machine and the client machine.
 
 **Server machine (Laptop)**
 
@@ -105,7 +105,7 @@ The first step in the server machine is to install the Network Time Protocol (`N
    $ sudo apt-get update
    $ sudo apt-get install ntp
 
-After installing the NTP protocol, we have to configure the daemon in order to broadcast the correct time to the network. The configuration file for NTP is located at `/etc/ntp.conf`. In servers block, you should add a few extra lines to the bottom of your servers list to provide your current local time as a default should you temporarily lose Internet connectivity:
+After installing the NTP protocol, we have to configure the daemon in order to broadcast the correct time to the network. The configuration file for NTP is located at ``/etc/ntp.conf``. In servers block, you should add a few extra lines to the bottom of your servers list to provide your current local time as a default should you temporarily lose Internet connectivity:
 
 .. code-block:: bash
     # Use Ubuntu's ntp server as a fallback.
@@ -122,7 +122,7 @@ Below in this file you should add the address of the network to which you want t
     restrict ::1
     restrict 192.168.2.1
 
-where 192.168.2.1 is the IP address of the client. In order to allow computers from the network to request the time and broadcast the current time, add the following lines:
+where ``192.168.2.1`` is the IP address of the client machine. In order to allow computers from the network to request the time and broadcast the current time, add the following lines:
 
 .. code-block:: bash
 
@@ -132,7 +132,7 @@ where 192.168.2.1 is the IP address of the client. In order to allow computers f
     # (Again, the address is an example only.)
     broadcast 192.168.2.255
 
-An example of the `ntp.conf` file in the server can be seen in the `Github page <https://raw.githubusercontent.com/lsa-pucrs/platypus_doc/master/docs/source/jetson/scripts/ntp.server.conf>`_.
+An example of the ``ntp.conf`` file in the server can be seen in the `Github page <https://raw.githubusercontent.com/lsa-pucrs/platypus_doc/master/docs/source/jetson/scripts/ntp.server.conf>`_.
 Having configurated the server properly, you have to start the daemon by running:
 
 .. code-block:: bash
@@ -148,7 +148,7 @@ In order to monitor the system and see if the time server is syncronized, run:
 You can also verify if the machine is broadcasting the time clock, by running:
 
 
-This command will generate a output as below, where `192.168.2.255  .BCST.` indicates that the current machine is broadcasting time to the 192.168.2.0 network.
+This command will generate a output as below, where ``192.168.2.255  .BCST.`` indicates that the current machine is broadcasting time to the 192.168.2.0 network.
 
 .. code-block:: bash
 
@@ -173,7 +173,7 @@ As occurred in the server machine, the first step is to install the Network Time
     $ sudo apt-get update
     $ sudo apt-get install ntp
 
-Next step we have to configure the daemon in order to receive the correct time from the server machine. Hence, edit the file `/etc/ntp.conf`, adding the IP of the server machine and localhost as fudge as:
+Next step we have to configure the daemon in order to receive the correct time from the server machine. Hence, edit the file ``/etc/ntp.conf``, adding the IP of the server machine and localhost as fudge as:
  
 .. code-block:: bash
 
@@ -192,7 +192,7 @@ Finally, to listen to time broadcasts on the local network you should de-comment
     disable auth
     broadcastclient
 
-An example of the configuration used in `ntp.conf` in the client machine, access the `Github page <https://raw.githubusercontent.com/lsa-pucrs/platypus_doc/master/docs/source/jetson/scripts/ntp.client.conf>`_. Having configurated the client, you have to restart the NTP daemon and wait few seconds to update the clock. Restart the daemon by running:
+An example of the configuration used in ``ntp.conf`` in the client machine, access the `Github page <https://raw.githubusercontent.com/lsa-pucrs/platypus_doc/master/docs/source/jetson/scripts/ntp.client.conf>`_. Having configurated the client, you have to restart the NTP daemon and wait few seconds to update the clock. Restart the daemon by running:
 
 .. code-block:: bash
 
