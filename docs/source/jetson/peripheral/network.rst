@@ -107,7 +107,7 @@ The first step in the server machine is to install the Network Time Protocol (`N
 
 After installing the NTP protocol, we have to configure the daemon in order to broadcast the correct time to the network. The configuration file for NTP is located at `/etc/ntp.conf`. In servers block, you should add a few extra lines to the bottom of your servers list to provide your current local time as a default should you temporarily lose Internet connectivity:
 
-.. code-block bash
+.. code-block:: bash
     # Use Ubuntu's ntp server as a fallback.
     server ntp.ubuntu.com
     server 127.127.1.0
@@ -115,7 +115,7 @@ After installing the NTP protocol, we have to configure the daemon in order to b
 
 Below in this file you should add the address of the network to which you want to broadcast the correct time. These lines are as follows:
 
-.. code-block bash
+.. code-block:: bash
 
     # Local users may interrogate the ntp server more closely.
     restrict 127.0.0.1
@@ -124,7 +124,7 @@ Below in this file you should add the address of the network to which you want t
 
 where 192.168.2.1 is the IP address of the client. In order to allow computers from the network to request the time and broadcast the current time, add the following lines:
 
-.. code-block bash
+.. code-block:: bash
 
     restrict 192.168.2.0 mask 255.255.255.0 nomodify notrap
 
@@ -135,13 +135,13 @@ where 192.168.2.1 is the IP address of the client. In order to allow computers f
 An example of the `ntp.conf` file in the server can be seen in the `Github page <https://raw.githubusercontent.com/lsa-pucrs/platypus_doc/master/docs/source/jetson/scripts/ntp.server.conf>`_.
 Having configurated the server properly, you have to start the daemon by running:
 
-.. code-block bash
+.. code-block:: bash
 
     $ sudo /etc/init.d/ntp restart
 
 In order to monitor the system and see if the time server is syncronized, run:
 
-.. code-block bash
+.. code-block:: bash
 
     $ tail -f /var/log/syslog
 
@@ -150,7 +150,7 @@ You can also verify if the machine is broadcasting the time clock, by running:
 
 This command will generate a output as below, where `192.168.2.255  .BCST.` indicates that the current machine is broadcasting time to the 192.168.2.0 network.
 
-.. code-block bash
+.. code-block:: bash
 
          remote           refid      st t when poll reach   delay   offset  jitter
     ==============================================================================
@@ -194,19 +194,19 @@ Finally, to listen to time broadcasts on the local network you should de-comment
 
 An example of the configuration used in `ntp.conf` in the client machine, access the `Github page <https://raw.githubusercontent.com/lsa-pucrs/platypus_doc/master/docs/source/jetson/scripts/ntp.client.conf>`_. Having configurated the client, you have to restart the NTP daemon and wait few seconds to update the clock. Restart the daemon by running:
 
-.. code-block bash
+.. code-block:: bash
 
     $ sudo /etc/init.d/ntp restart
 
 In order check whether the system is syncronized or not, run:
 
-.. code-block bash
+.. code-block:: bash
 
     $ ntpq -c lpeer
 
 This command will generate an output as bellow, where delay, offset and jitter different than zero indicates that it is receiving :
 
-.. code-block bash
+.. code-block:: bash
 
          remote           refid      st t when poll reach   delay   offset  jitter
     ==============================================================================
@@ -215,7 +215,7 @@ This command will generate an output as bellow, where delay, offset and jitter d
 
 To check if the date is updated, run:
 
-.. code-block bash
+.. code-block:: bash
 
     $ date
 
