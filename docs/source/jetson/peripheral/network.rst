@@ -91,14 +91,12 @@ Next, download and update the ``/etc/dnsmasq.conf`` file, adding the following c
 Next, download and update the ``sysctl.conf`` file, which only uncomment the line ``net.ipv4.ip_forward=1``. A file containing the configuration of the access point to start when the Jetson is turned on is downloaded and moved to ``/home/ubuntu/.accesspoint.sh`` and the command to call this file is added to the ``/etc/rc.local`` file, thus, allowing the access point to run when the Jetson start up. If everything is OK, when rebooting the Jetson, the access point network should be available to connect.
 
 
-=================================
 Syncronizing clocks in Jetson TK1
-=================================
+----------------------------------
 
 As Jetson does not have an internal battery, every time it is turned off, the clock returns to `Wed, Dec 31 1969`. As we record bags using timestamp, it is important to keep the clock updated. Here, we detail how to configure the server machine (laptop) and the client machine (Jetson) in order to syncronize both clocks. It is expected that the server clock is correct/updated. We separate the explanation in two parts: the server machine and the client machine.
 
-Server machine (Laptop)
-------------------------
+**Server machine (Laptop)**
 
 The first step in the server machine is to install the Network Time Protocol (`NTP <https://help.ubuntu.com/lts/serverguide/NTP.html>`_). NTP is a protocol designed for accurately synchronizing local time clocks with networked time servers. The NTP network of time servers is set up as a hierarchical manner, such that any user can enter the system as a server at some level. In order to install the NTP package, run:
 
@@ -166,8 +164,7 @@ This command will generate a output as below, where `192.168.2.255  .BCST.` indi
 
 
 
-Client machine (Jetson)
-------------------------
+**Client machine (Jetson)**
 
 As occurred in the server machine, the first step is to install the Network Time Protocol (`NTP <https://help.ubuntu.com/lts/serverguide/NTP.html>`_). In order to install the NTP package, run:
 
