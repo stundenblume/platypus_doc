@@ -226,7 +226,7 @@ In case the date is not automatically updated, you can force the update by stopp
     $ sudo ntpd -s 192.168.2.185
     $ sudo service ntp start
 
-Finally, check if the date is updated:
+A script to perform the manual update can be found in the `Github page <https://raw.githubusercontent.com/lsa-pucrs/platypus_doc/master/docs/source/jetson/scripts/update_clock.sh>`_. Finally, check if the date is updated:
 
 .. code-block:: bash
 
