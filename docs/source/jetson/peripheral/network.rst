@@ -147,6 +147,9 @@ In order to monitor the system and see if the time server is syncronized, run:
 
 You can also verify if the machine is broadcasting the time clock, by running:
 
+.. code-block:: bash
+
+    $ ntpq -c lpeer
 
 This command will generate a output as below, where ``192.168.2.255  .BCST.`` indicates that the current machine is broadcasting time to the 192.168.2.0 network.
 
