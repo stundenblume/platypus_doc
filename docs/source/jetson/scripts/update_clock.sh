@@ -9,7 +9,7 @@
 
 if [[ $# -ne 1 ]]; then
     echo "ERROR: update clock by passing the IP of the server"
-    echo "./update_clock.sh 192.168.2.185"
+    echo "./update_clock.sh 192.168.2.100"
 elif [[ $1 =~ ^[0-9]+\.[0-9]+\.+[0-9]+\.[0-9]+$ ]]; then
     sudo service ntp stop
     sudo ntpd -s $1

@@ -1,0 +1,15 @@
+# interfaces(5) file used by ifup(8) and ifdown(8)
+auto lo
+iface lo inet loopback
+
+# Automatically connect to Tegra-WLAN network
+auto wlan0
+iface wlan0 inet static
+    address 192.168.2.100
+    netmask 255.255.255.0
+    network 192.168.2.0
+    broadcast 192.168.2.255
+    gateway 192.168.2.1
+    dns-nameservers 192.168.2.1 8.8.8.8
+    wpa-ssid Tegra-WLAN
+    wpa-psk edcae6b3d85a41abbc9a3a67e26bc5943ce6faf1c4146db9bdad462b40cab1af

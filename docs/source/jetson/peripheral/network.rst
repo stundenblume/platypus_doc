@@ -98,7 +98,30 @@ As Jetson does not have an internal battery, every time it is turned off, the cl
 
 **Server machine (Laptop)**
 
-The first step in the server machine is to install the Network Time Protocol (`NTP <https://help.ubuntu.com/lts/serverguide/NTP.html>`_). NTP is a protocol designed for accurately synchronizing local time clocks with networked time servers. The NTP network of time servers is set up as a hierarchical manner, such that any user can enter the system as a server at some level. In order to install the NTP package, run:
+Before installing the NTP server, we configure the server machine to have a static IP address. Thus, Jetson knows what IP address to query the clock to syncronize. Here we set the IP to ``192.168.2.100`` in our ``wlan0`` interface. To configure the interface with static IP, edit the file ``/etc/network/interfaces`` and add the commands:
+
+.. code-block:: bash
+
+    # Automatically connect to Tegra-WLAN network
+    auto wlan0
+    iface wlan0 inet static
+        address 192.168.2.100
+        netmask 255.255.255.0
+        network 192.168.2.0
+        broadcast 192.168.2.255
+        gateway 192.168.2.1
+        dns-nameservers 192.168.2.1 8.8.8.8
+        wpa-ssid Tegra-WLAN
+        wpa-psk edcae6b3d85a41abbc9a3a67e26bc5943ce6faf1c4146db9bdad462b40cab1af
+
+Having the interface configured, restart the ``wlan0`` interface with:
+
+.. code-block:: bash
+
+    $ sudo ifconfig wlan0 down
+    $ sudo ifconfig wlan0 up
+
+A file containing the configuration of the ``/etc/network/interfaces`` can be found in the `Github page <https://raw.githubusercontent.com/lsa-pucrs/platypus_doc/master/docs/source/jetson/scripts/interfaces.server>`_. Now you can install the Network Time Protocol (`NTP <https://help.ubuntu.com/lts/serverguide/NTP.html>`_). NTP is a protocol designed for accurately synchronizing local time clocks with networked time servers. The NTP network of time servers is set up as a hierarchical manner, such that any user can enter the system as a server at some level. In order to install the NTP package, run:
 
 .. code-block:: bash
 
@@ -179,7 +202,7 @@ Next step we have to configure the daemon in order to receive the correct time f
 .. code-block:: bash
 
     # IP of the NTP server machine 
-    server 192.168.2.185
+    server 192.168.2.100
 
     # Use Ubuntu's ntp server as a fallback.
     server ntp.ubuntu.com
@@ -211,7 +234,7 @@ This command will generate an output as bellow, where delay, offset and jitter d
 
          remote           refid      st t when poll reach   delay   offset  jitter
     ==============================================================================
-     *192.168.2.185  146.164.48.5     2 u   89 1024  337    1.603   -0.745   0.469
+     *192.168.2.100  146.164.48.5     2 u   89 1024  337    1.603   -0.745   0.469
       192.168.2.1    .STEP.          16 u    - 1024    0    0.000    0.000   0.000
 
 To check if the date is updated, run:
@@ -226,7 +249,7 @@ In case the date is not automatically updated, you can force the update by stopp
 .. code-block:: bash
 
     $ sudo service ntp stop
-    $ sudo ntpd -s 192.168.2.185
+    $ sudo ntpd -s 192.168.2.100
     $ sudo service ntp start
 
 A script to perform the manual update can be found in the `Github page <https://raw.githubusercontent.com/lsa-pucrs/platypus_doc/master/docs/source/jetson/scripts/update_clock.sh>`_. Finally, check if the date is updated:
