@@ -162,8 +162,6 @@ This command will generate a output as below, where ``192.168.2.255  .BCST.`` in
      192.168.2.255   .BCST.          16 u    -   64    0    0.000    0.000   0.000
 
 
-
-
 **Client machine (Jetson)**
 
 As occurred in the server machine, the first step is to install the Network Time Protocol (`NTP <https://help.ubuntu.com/lts/serverguide/NTP.html>`_). In order to install the NTP package, run:
@@ -219,3 +217,17 @@ To check if the date is updated, run:
 
     $ date
 
+
+In case the date is not automatically updated, you can force the update by stopping NTP server and manually checking time by the server IP. Finally, start the NTP client again, as follows:
+
+.. code-block:: bash
+
+    $ sudo service ntp stop
+    $ sudo ntpd -s 192.168.2.185
+    $ sudo service ntp start
+
+Finally, check if the date is updated:
+
+.. code-block:: bash
+
+    $ date
