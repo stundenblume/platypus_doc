@@ -143,7 +143,6 @@ Below in this file you should add the address of the network to which you want t
     # Local users may interrogate the ntp server more closely.
     restrict 127.0.0.1
     restrict ::1
-    restrict 192.168.2.1
 
 where ``192.168.2.1`` is the IP address of the client machine. In order to allow computers from the network to request the time and broadcast the current time, add the following lines:
 
@@ -154,6 +153,13 @@ where ``192.168.2.1`` is the IP address of the client machine. In order to allow
     # If you want to provide time to your local subnet, change the next line.
     # (Again, the address is an example only.)
     broadcast 192.168.2.255
+
+Finally, to broadcast time on the local network you should de-comment the last two lines:
+
+.. code-block:: bash
+
+    disable auth
+    broadcastclient
 
 An example of the ``ntp.conf`` file in the server can be seen in the `Github page <https://raw.githubusercontent.com/lsa-pucrs/platypus_doc/master/docs/source/jetson/scripts/ntp.server.conf>`_.
 Having configurated the server properly, you have to start the daemon by running:
@@ -205,16 +211,15 @@ Next step we have to configure the daemon in order to receive the correct time f
     server 192.168.2.100
 
     # Use Ubuntu's ntp server as a fallback.
-    server ntp.ubuntu.com
+    # server ntp.ubuntu.com
     server 127.127.1.0
     fudge 127.127.1.0 stratum 10
 
-Finally, to listen to time broadcasts on the local network you should de-comment the last two lines:
+In the end of the file, disable auth as you trust everybody on the network.
 
 .. code-block:: bash
 
     disable auth
-    broadcastclient
 
 An example of the configuration used in ``ntp.conf`` in the client machine, access the `Github page <https://raw.githubusercontent.com/lsa-pucrs/platypus_doc/master/docs/source/jetson/scripts/ntp.client.conf>`_. Having configurated the client, you have to restart the NTP daemon and wait few seconds to update the clock. Restart the daemon by running:
 
@@ -249,7 +254,7 @@ In case the date is not automatically updated, you can force the update by stopp
 .. code-block:: bash
 
     $ sudo service ntp stop
-    $ sudo ntpd -s 192.168.2.100
+    $ sudo ntpdate -t 3 -s 192.168.2.100
     $ sudo service ntp start
 
 A script to perform the manual update can be found in the `Github page <https://raw.githubusercontent.com/lsa-pucrs/platypus_doc/master/docs/source/jetson/scripts/update_clock.sh>`_. Finally, check if the date is updated:

@@ -12,7 +12,7 @@ if [[ $# -ne 1 ]]; then
     echo "./update_clock.sh 192.168.2.100"
 elif [[ $1 =~ ^[0-9]+\.[0-9]+\.+[0-9]+\.[0-9]+$ ]]; then
     sudo service ntp stop
-    sudo ntpd -s $1
+    sudo ntpdate -t 3 -s $1
     sudo service ntp start
 else
     echo "ERROR: $1 is not a valid IP address"

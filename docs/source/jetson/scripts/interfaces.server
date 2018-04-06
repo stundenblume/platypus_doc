@@ -13,3 +13,6 @@ iface wlan0 inet static
     dns-nameservers 192.168.2.1 8.8.8.8
     wpa-ssid Tegra-WLAN
     wpa-psk edcae6b3d85a41abbc9a3a67e26bc5943ce6faf1c4146db9bdad462b40cab1af
+
+# wpa-psk is generated from Tegra wifi password to HEX using the site
+# http://jorisvr.nl/wpapsk.html
