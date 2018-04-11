@@ -105,7 +105,7 @@ In case everything is looking fine, ZED will publish the following topics in ROS
 Creating a package to access ZED with ROS
 ------------------------------------------
 
-Although ZED Camera contains a ROS wrapper, we noticed that usually the quality of the depth images is very slow. Hence, we create a ROS package named ``zedpub`` that reads images from ZED Camera and publishes them as ROS topics. The entire folder containing the ROS package can be found in the `Github page <https://github.com/lsa-pucrs/platypus_doc/tree/master/docs/source/jetson/scripts/zedpub/`_. Before downloading and compiling the package, it is important to make sure that you have installed `vision_opencv <http://platypus-boats.readthedocs.io/en/latest/source/jetson/ros.html#installing-vision-opencv-in-ros>`_ in ROS. Having ``vision_opencv`` installed, you can download and compile the ``zedpub`` package as:
+Although ZED Camera contains a ROS wrapper, we noticed that usually the quality of the depth images is very slow. Hence, we create a ROS package named ``zedpub`` that reads images from ZED Camera and publishes them as ROS topics. The entire folder containing the ROS package can be found in the `Github page <https://github.com/lsa-pucrs/platypus_doc/tree/master/docs/source/jetson/scripts/zedpub/`_ . Before downloading and compiling the package, it is important to make sure that you have installed `vision_opencv <http://platypus-boats.readthedocs.io/en/latest/source/jetson/ros.html#installing-vision-opencv-in-ros>`_ in ROS. Having ``vision_opencv`` installed, you can download and compile the ``zedpub`` package as:
 
 .. code-block:: bash
 
