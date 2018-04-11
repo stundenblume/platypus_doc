@@ -102,6 +102,50 @@ In case everything is looking fine, ZED will publish the following topics in ROS
     /zed/right/image_rect_color
 
 
+Creating a package to access ZED with ROS
+------------------------------------------
+
+Although ZED Camera contains a ROS wrapper, we noticed that usually the quality of the depth images is very slow. Hence, we create a ROS package named ``zedpub`` that reads images from ZED Camera and publishes them as ROS topics. The entire folder containing the ROS package can be found in the `Github page<https://github.com/lsa-pucrs/platypus_doc/tree/master/docs/source/jetson/scripts/zedpub/`_. Before downloading and compiling the package, it is important to make sure that you have installed `vision_opencv<http://platypus-boats.readthedocs.io/en/latest/source/jetson/ros.html#installing-vision-opencv-in-ros>`_ in ROS. Having ``vision_opencv`` installed, you can download and compile the ``zedpub`` package as:
+
+.. code-block:: bash
+
+    # go to the source folder of the catkin_ws workspace
+    $ cd ~/catkin_ws/src/
+
+    # Download the ZED package and decompress in the source folder
+    $ wget --no-check-certificate --content-disposition https://raw.githubusercontent.com/lsa-pucrs/platypus_doc/master/docs/source/jetson/scripts/zedpub.zip
+    $ unzip zedpub.zip && rm zedpub.zip
+
+    # compile the workspace
+    $ cd ..
+    $ catkin_make
+
+After compiling the catkin workspace, you can test the new node by running ``roscore`` in a terminal and running ``roslaunch`` in another terminal as:
+
+.. code-block:: bash
+
+    # in Terminal 1, run the ROS core
+    $ roscore
+
+    # in Terminal 2, run the ROS launch
+    $ roslaunch zedpub camera.launch
+
+    # in Terminal 3, you can check the published topics
+    $ rostopic list
+
+
+You should then see the following topics in the list:
+
+.. code-block:: bash
+
+    /camera/depth
+    /camera/left_image
+    /camera/right_image
+    /rosout
+    /rosout_agg
+
+
+
 References
 -----------
 
