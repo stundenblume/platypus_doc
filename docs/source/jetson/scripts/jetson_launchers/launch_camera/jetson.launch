@@ -6,6 +6,6 @@
 	<include file="$(find i2c_imu)/launch/i2c_imu_auto.launch" />
 
 	<!-- ZED -->
-	<include file="$(find zed_wrapper)/launch/zed.launch" />
+	<include file="$(find zedpub)/launch/camera.launch" />
 </launch>
 
