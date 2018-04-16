@@ -1,0 +1,6 @@
+# Temporary files
+*.rst~
+*.txt~
+*.py~
+*.sh~
+
