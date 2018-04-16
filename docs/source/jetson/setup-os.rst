@@ -59,7 +59,7 @@ In order to add a SSD disk in Jetson board, we have to connect a SATA cable and 
 
 After connecting the SSD disk, we format it using ``ext4`` file system by logging into Ubuntu and accessing ``Disks`` application. Inside the application, select the SSD disk and click on the gear and select ``Format`` (or press ``Shift+Ctrl+F``). Then, add a name to the disk (e.g. ``JetsonSSD``) and click in ``Format``, as the images below:
 
-.. image:: images/disks_app.png
+.. image:: images/disks.png
    :align: center
    :width: 500pt
 
