@@ -65,7 +65,7 @@ After connecting the SSD disk, we format it using ``ext4`` file system by loggin
 
 .. image:: images/format.png
    :align: center
-   :width: 500pt
+   :width: 300pt
 
 After formating the SSD disk, we have to mount it at startup. In order to do it, we create a bash script to mount the disk and move it to ``/etc/init.d`` folder. Our mounting script is based on ``udisksctl`` program and to create it we have the follow steps. With the disk manually mounted, we first run the ``mount`` command to discover where the SSD is mounted, obtaining:
 
