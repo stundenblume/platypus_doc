@@ -48,6 +48,64 @@ The ``extlinux.conf`` file looks like:
 Look for ``usb_port_owner_info=0`` in the file and replace it by ``usb_port_owner_info=2``. Finally, save the file and exit.
 
 
+Adding a SSD Disk
+-----------------
+
+In order to add a SSD disk in Jetson board, we have to connect a SATA cable and a power cable in the board as illustrated in the image below:
+
+.. image:: ../images/connect_ssd.png
+   :align: center
+   :width: 500pt
+
+After connecting the SSD disk, we format it using ``ext4`` file system by logging into Ubuntu and accessing ``Disks`` application. Inside the application, select the SSD disk and click on the gear and select ``Format`` (or press ``Shift+Ctrl+F``). Then, add a name to the disk (e.g. ``JetsonSSD``) and click in ``Format``, as the images below:
+
+.. image:: ../images/disks_app.png
+   :align: center
+   :width: 500pt
+
+.. image:: ../images/format.png
+   :align: center
+   :width: 500pt
+
+After formating the SSD disk, we have to mount it at startup. In order to do it, we create a bash script to mount the disk and move it to ``/etc/init.d`` folder. Our mounting script is based on ``udisksctl`` program and to create it we have the follow steps. With the disk manually mounted, we first run the ``mount`` command to discover where the SSD is mounted, obtaining:
+
+.. code-block:: bash
+
+    $ mount
+    /dev/sda on /media/ubuntu/JetsonSSD type ext4 (rw,nosuid,nodev,uhelper=udisk2)
+
+Knowing the mounting local of the SSD disk (``/dev/sda``), we have to discover its uuid. To discover the uuid we run:
+
+.. code-block:: bash
+
+    $ ls -al /dev/disk/by-uuid
+    lrwxrwxrwx 1 root root   9 Dec 31 21:00 ac183b24-3e75-4190-bcb7-32160e9a7c55 -> ../../sda
+
+Having the uuid of the disk we can create a script called ``mount_ssd.sh`` with the call to the mounting point. This script contains the following lines:
+
+.. code-block:: bash
+
+    #!/bin/bash
+    # Mount the SSD disk at startup
+
+    udisksctl mount --block-device /dev/disk/by-uuid/ac183b24-3e75-4190-bcb7-32160e9a7c55
+
+After creating the script, make the file executable and copy to ``/etc/init.d/`` folder with:
+
+.. code-block:: bash
+
+    $ chmod +x mount_ssd.sh
+    $ sudo cp mount_ssd.sh /etc/init.d/
+
+Next, run ``update-rc.d`` to update the scripts by running:
+
+.. code-block:: bash
+
+    $ sudo update-rc.d mount_ssd.sh defaults 99
+
+Next time Ubuntu is started, the SSD disk will be mounted at startup.
+
+
 Important Packages
 -------------------
 
