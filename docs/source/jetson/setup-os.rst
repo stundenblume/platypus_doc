@@ -67,7 +67,7 @@ After connecting the SSD disk, we format it using ``ext4`` file system by loggin
    :align: center
    :width: 300pt
 
-After formating the SSD disk, we have to mount it at startup. In order to do it, we create a bash script to mount the disk and move it to ``/etc/init.d`` folder. Our mounting script is based on ``udisksctl`` program and to create it we have the follow steps. With the disk manually mounted, we first run the ``mount`` command to discover where the SSD is mounted, obtaining:
+After formating the SSD disk, we have to mount it at startup. In order to do it, we have to add a call in ``/etc/fstab`` with the mounting point. In order to add this line, we have to discover the uuid of the device. With the disk manually mounted, we run the ``mount`` command to discover where the SSD is mounted, obtaining:
 
 .. code-block:: bash
 
@@ -81,29 +81,19 @@ Knowing the mounting local of the SSD disk (``/dev/sda``), we have to discover i
     $ ls -al /dev/disk/by-uuid
     lrwxrwxrwx 1 root root   9 Dec 31 21:00 ac183b24-3e75-4190-bcb7-32160e9a7c55 -> ../../sda
 
-Having the uuid of the disk we can create a script called ``mount_ssd.sh`` with the call to the mounting point. This script contains the following lines:
+Having the uuid of the disk we can add a line to the ``/etc/fstab`` with a call to the mounting point. Running the command:
 
 .. code-block:: bash
 
-    #!/bin/bash
-    # Mount the SSD disk at startup
+    $ sudo gedit /etc/fstab
 
-    udisksctl mount --block-device /dev/disk/by-uuid/ac183b24-3e75-4190-bcb7-32160e9a7c55
-
-After creating the script, make the file executable and copy to ``/etc/init.d/`` folder with:
+We add the following line to the file:
 
 .. code-block:: bash
 
-    $ chmod +x mount_ssd.sh
-    $ sudo cp mount_ssd.sh /etc/init.d/
+    /dev/disk/by-uuid/ac183b24-3e75-4190-bcb7-32160e9a7c55 /media/JetsonSSD ext defaults 0 0
 
-Next, run ``update-rc.d`` to update the scripts by running:
-
-.. code-block:: bash
-
-    $ sudo update-rc.d mount_ssd.sh defaults 99
-
-Next time Ubuntu is started, the SSD disk will be mounted at startup.
+Save the file and close it. Next time Ubuntu is started, the SSD disk will be mounted at startup.
 
 
 Important Packages
