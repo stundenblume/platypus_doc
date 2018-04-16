@@ -10,11 +10,11 @@ using namespace std;
 int main(int argc, char** argv) {
     // infos of images
     int tstamp = std::time(0);
-    string dright = "/media/ubuntu/Card/right/";
+    string dright = "/media/ubuntu/JetsonSSD/right/";
     string nm_right;
-    string dleft = "/media/ubuntu/Card/left/";
+    string dleft = "/media/ubuntu/JetsonSSD/left/";
     string nm_left;
-    string ddepth = "/media/ubuntu/Card/depth/";
+    string ddepth = "/media/ubuntu/JetsonSSD/depth/";
     string nm_depth;
 
     int cnt = 0;
