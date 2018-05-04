@@ -17,4 +17,5 @@ This section shows how to add the following peripherals to the RPi board
    Atlas water probes <atlas-sensors>
    Lowrance side scanner <lowrance>
    Water sampling <water-sampling>
+   Bullet M2 <bullet-m2>
 
