@@ -7,9 +7,10 @@ In this page, we will provide you a quick start with GAMS/MADARA.
 
 Here, we focus into practical use of those tools, to formal concepts, we advise you to read papers available into internet. Also, we can watch some videos online in folowwing link:
 
-.. image:: introduction_madara_gams.jpg
+.. image:: images/introduction_madara_gams.jpg
    :target: https://www.youtube.com/playlist?list=PLSNlEg26NNpwi4ggcPYU8JvS1aVtV60_z
-
+   :align: center
+   :width: 400pt
 
 .. toctree::
 
