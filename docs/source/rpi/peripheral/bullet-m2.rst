@@ -41,7 +41,7 @@ After plugging the adapter to a power outlet, the PoE port connects to the Bulle
 In the Platypus boat, the connection is the same, except for the power which comes from the boat's electronics board, as shown in the diagram below:
 
 .. image:: images/bullet_connection.png
-	:align: center
+    :align: center
     :width: 400pt
 
 
