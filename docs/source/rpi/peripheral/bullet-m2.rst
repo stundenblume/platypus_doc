@@ -1,14 +1,11 @@
-
-
 =============================================
 Configuring the Ubiquity Bullet M2HP Radio
 =============================================
 
-
 About
------------------------------
+------
 
-The `Bullet M2HP`_ (Datasheet_) is a high power WiFi radio adapter by Ubiquity.
+`Bullet M2HP`_ (Datasheet_) is a high power WiFi radio adapter by Ubiquity.
 
 .. _`Bullet M2HP`: https://www.ubnt.com/airmax/bulletm
 .. _`Datasheet`: https://dl.ubnt.com/datasheets/bulletm/bm_ds_web.pdf
@@ -16,6 +13,7 @@ The `Bullet M2HP`_ (Datasheet_) is a high power WiFi radio adapter by Ubiquity.
 .. image:: images/bulletm2.jpg
 	:alt: Image of the Bullet M2HP radio
 	:align: center
+    :width: 400pt
 
 Features:
 
@@ -24,7 +22,6 @@ Features:
 - Compatible with high-gain antennas (N-type connector)
 - Communication range up to 50 km (depending on the antenna)
 - Power-over-Ethernet (PoE)
-- Etc
 
 In the case of the Platypus boat, the Bullet is used as an access point (hotspot), generating a long-range WiFi (WLAN) network for communcation between the boat and the on-shore devices.
 It connects to the Raspberry Pi via its Ethernet port (LAN).
@@ -43,46 +40,42 @@ As the radio is powered through PoE, it comes with a PoE adapter as seen in the 
 After plugging the adapter to a power outlet, the PoE port connects to the Bullet, while the LAN port connects to the Raspberry Pi's Ethernet port.
 In the Platypus boat, the connection is the same, except for the power which comes from the boat's electronics board, as shown in the diagram below:
 
-.. image:: images/bullet_connection_diagram.jpg
+.. image:: images/bullet_connection.png
 	:alt: Connection diagram for the Bullet in the Platypus boat. 12 volts come from the Platypus' electronics board, while the LAN and PoE ports in the adapter are connected to the Raspberry and Bullet respectively.
 	:align: center
-
+    :width: 400pt
 
 
 Accessing the Bullet M2HP configuration page
------------------------------
+---------------------------------------------
 
-From a factory reset, the Bullet can be accessed through its standard IP (192.168.1.20).
-However, its default settings are WiFi station and bridge mode.
-As such, it does not generate a WiFi network nor runs a DHCP server, meaning that a physical cable connection and manual IP setting are necessary.
-The computer/Raspberry must also be operating in the same IP range as the Bullet, thus it must be a "192.168.1.x" IP.
+From a factory reset, the Bullet can be accessed through its standard IP (``192.168.1.20``). However, its default settings are WiFi station and bridge mode. As such, it does not generate a WiFi network nor runs a DHCP server, meaning that a physical cable connection and manual IP setting are necessary. The computer/Raspberry must also be operating in the same IP range as the Bullet, thus it must be a ``192.168.1.x`` IP.
 
-For this initial setup, it is recommended to connect the Bullet to a conventional computer, as the configuration is done via browser (or to a Raspberry running a graphical interface OS).
+For this initial setup, it is recommended to connect the Bullet to a conventional computer, as the configuration is done via browser (or to a Raspberry running a graphical interface OS). In linux, we can manually connect to the bullet through the ``ifconfig`` command. After connecting the LAN adapter port into the computer, run:
 
-In linux, we can manually connect to the bullet through the "ifconfig" command.
-After connecting the LAN adapter port into the computer, run::
+.. code-block:: bash
 
-	sudo ifconfig
+    $ sudo ifconfig
 
-to find out which interface is responsible for Ethernet (e.g., eth0, enp0s3).
-To manually assign an IP and connect, run::
+to find out which interface is responsible for Ethernet (e.g., eth0, enp0s3). To manually assign an IP and connect, run:
 
-	sudo ifconfig <name of interface> 192.168.1.<n> netmask 255.255.255.0
+.. code-block:: bash
 
-where <n> is a number from 1 to 255, excluding 20. For example::
+    $ sudo ifconfig <name_of_interface> 192.168.1.x netmask 255.255.255.0
 
-	sudo ifconfig eth0 192.168.1.7 netmask 255.255.255.0
+where x is a number from 1 to 254, excluding 20. For example:
 
-The Bullet configuration page can the be accessed in a browser with the 192.168.1.20 IP.
-A untrusted connection or security certificate warning may appear, which can be safely ignored.
-The default username and password are both **ubnt**.
+.. code-block:: bash
 
+    $ sudo ifconfig eth0 192.168.1.7 netmask 255.255.255.0
+
+The Bullet configuration page can the be accessed in a browser with the ``192.168.1.20`` IP. A untrusted connection or security certificate warning may appear, which can be safely ignored. The default username and password are both **ubnt**.
 
 
 Configuring the Bullet M2HP as an Access Point
------------------------------
+-----------------------------------------------
 
-To configure the Bullet as an access point, change the following configurations in the "Wireless" tab:
+To configure the Bullet as an access point, change the following configurations in the ``Wireless`` tab:
 
 - Wireless mode: Access Point
 - SSID: <WiFi network name>
@@ -93,22 +86,14 @@ To configure the Bullet as an access point, change the following configurations 
 
 <BOTAR IMAGEM AQUI>
 
-Click "Change" but **do not click "Apply" yet**.
-In the leftmost tab, uncheck the "AirMax" box and click "Change".
+Click "Change" but **do not click "Apply" yet**. In the leftmost tab, uncheck the "AirMax" box and click "Change". This is sufficient to configure the radio as an Access Point, and it will generate a WiFi network with the specified SSID. However, there are two possible configurations regarding the Bullet's network role: *Bridge* and *Router* mode.
 
-This is sufficient to configure the radio as an Access Point, and it will generate a WiFi network with the specified SSID.
-However, there are two possible configurations regarding the Bullet's network role: Bridge and Router mode.
-
-The typical configuration is to use the Bullet in Router mode with a DHCP server, as to automatically address an IP to each connecting device.
-If this is the case, this configuration can be performed in the "Network" tab and the changes can be applied with the "Apply" button.
-After a short connection drop, you may connect to the access point's WiFi network and access it with the IP specified in the "Network" tab.
-
-As the Router mode isolates the LAN and WLAN interfaces, connection between wireless devices and the Raspberry's Ethernet becomes impossible.
-Thus, in the case of the Platypus boat, the radio must be configured in Bridge mode.
+.. note:: The typical configuration is to use the Bullet in *Router* mode with a DHCP server, as to automatically address an IP to each connecting device. If this is the case, this configuration can be performed in the "Network" tab and the changes can be applied with the "Apply" button. After a short connection drop, you may connect to the access point's WiFi network and access it with the IP specified in the "Network" tab. As the Router mode isolates the LAN and WLAN interfaces, connection between wireless devices and the Raspberry's Ethernet becomes impossible.
+Thus, in the case of the Platypus boat, **the radio must be configured in Bridge mode**.
 
 
 Configuring the Bullet M2HP in Bridge mode
------------------------------
+-------------------------------------------
 
 In the "Network" tab, modify the following fields to configure the radio in bridge mode:
 
@@ -121,30 +106,38 @@ In the "Network" tab, modify the following fields to configure the radio in brid
 
 <BOTAR IMAGEM AQUI>
 
-Click "Change" and then "Apply".
-After a short connection drop, the radio will generate a WiFi network with the SSID specified in the "Wireless" tab.
-
+Click ``Change`` and then ``Apply``. After a short connection drop, the radio will generate a WiFi network with the SSID specified in the "Wireless" tab.
 
 
 Testing the connection between WiFi and the Raspberry's Ethernet
------------------------------
+-----------------------------------------------------------------
 
-As there is no DHCP server, the Raspberry and WiFi devices must be manually connected to the Bullet.
-Once again, this can be done with the "ifconfig" command in Linux.
+As there is no DHCP server, the Raspberry and WiFi devices must be manually connected to the Bullet. Once again, this can be done with the ``ifconfig`` command in Linux. For the Raspberry, the interface used is the Ethernet (e.g., eth0). After connecting the LAN cable on the Raspberry's Ethernet port, run:
 
-For the Raspberry, the interface used is the Ethernet (e.g., eth0).
-After connecting the LAN cable on the Raspberry's Ethernet port, run::
+.. code-block:: bash
 
-	sudo ifconfig <name of interface> <IP in the same range as the Bullet> netmask 255.255.255.0
+    $ sudo ifconfig <name of interface> <IP in the same range as the Bullet> netmask 255.255.255.0
 
-For example::
+For example:
 
-	sudo ifconfig eth0 192.168.10.210 netmask 255.255.255.0
+.. code-block:: bash
 
-[It should be possible to define this forever via `WPA supplicant<https://www.raspberrypi.org/forums/viewtopic.php?t=191140>`_. TEST THIS!]
+    $ sudo ifconfig eth0 192.168.10.210 netmask 255.255.255.0
 
-An IP must also be manually set for the WiFi devices.
-In Android 7.0, this can be done as follows:
+Setting IP by ``ifconfig`` will assign the IP temporarily to the port. In order to fix a static IP to the Raspberry Pi, the ``/etc/dhcpcd.conf`` must be edited, adding the following lines to the end of the file:
+
+.. code-block:: bash
+
+    interface eth0
+    static ip_address=192.168.10.210/24
+    static routers=192.168.10.1
+    static domain_name_servers=192.168.10.1
+
+
+Configuring Android Devices
+----------------------------
+
+An IP must also be manually set for the WiFi devices. In Android 7.0, this can be done as follows:
 
 - Settings -> Connections -> Wi-Fi
 - Touch the Bullet's WiFi network
@@ -154,16 +147,22 @@ In Android 7.0, this can be done as follows:
 - Gateway -> Same as specified in the "Network" tab (e.g., 192.168.10.1)
 - DNS 1 -> 8.8.8.8
 
-To test the connection, run the "ping" command on the Raspberry::
+To test the connection, run the "ping" command on the Raspberry:
 
-	ping <IP of connected WiFi device>
+.. code-block:: bash
 
-or on the WiFi device (if available)::
+    $ ping <IP of connected WiFi device>
 
-	ping <IP of Raspberry>
+or on the WiFi device (if available):
+
+.. code-block:: bash
+
+    $ ping <IP of Raspberry>
 
 
-If successful, there should be a response such as::
+If successful, there should be a response such as:
+
+.. code-block:: bash
 
 	PING 192.168.10.207 (192.168.10.207) 56(84) bytes of data.
 	64 bytes from 192.168.10.207: icmp_seq=1 ttl=64 time=7.03 ms
