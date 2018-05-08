@@ -11,9 +11,9 @@ About
 .. _`Datasheet`: https://dl.ubnt.com/datasheets/bulletm/bm_ds_web.pdf
 
 .. image:: images/bulletm2.jpg
-	:alt: Image of the Bullet M2HP radio
-	:align: center
+    :align: center
     :width: 400pt
+
 
 Features:
 
