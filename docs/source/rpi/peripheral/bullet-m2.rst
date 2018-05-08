@@ -41,7 +41,6 @@ After plugging the adapter to a power outlet, the PoE port connects to the Bulle
 In the Platypus boat, the connection is the same, except for the power which comes from the boat's electronics board, as shown in the diagram below:
 
 .. image:: images/bullet_connection.png
-	:alt: Connection diagram for the Bullet in the Platypus boat. 12 volts come from the Platypus' electronics board, while the LAN and PoE ports in the adapter are connected to the Raspberry and Bullet respectively.
 	:align: center
     :width: 400pt
 
