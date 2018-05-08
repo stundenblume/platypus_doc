@@ -76,19 +76,20 @@ Configuring the Bullet M2HP as an Access Point
 
 To configure the Bullet as an access point, change the following configurations in the ``Wireless`` tab:
 
-- Wireless mode: Access Point
-- SSID: <WiFi network name>
-- Channel Width: 20 MHz
-- Frequency, MHz: 2412
-- Output power: Max
-- Security: None (you may setup WPA-PSK or WPA2-PSK if prefered)
+.. code-block:: bash
+
+    Wireless mode: Access Point
+    SSID: <WiFi network name>
+    Channel Width: 20 MHz
+    Frequency, MHz: 2412
+    Output power: Max
+    Security: None (you may setup WPA-PSK or WPA2-PSK if prefered)
 
 <BOTAR IMAGEM AQUI>
 
 Click "Change" but **do not click "Apply" yet**. In the leftmost tab, uncheck the "AirMax" box and click "Change". This is sufficient to configure the radio as an Access Point, and it will generate a WiFi network with the specified SSID. However, there are two possible configurations regarding the Bullet's network role: *Bridge* and *Router* mode.
 
-.. note:: The typical configuration is to use the Bullet in *Router* mode with a DHCP server, as to automatically address an IP to each connecting device. If this is the case, this configuration can be performed in the "Network" tab and the changes can be applied with the "Apply" button. After a short connection drop, you may connect to the access point's WiFi network and access it with the IP specified in the "Network" tab. As the Router mode isolates the LAN and WLAN interfaces, connection between wireless devices and the Raspberry's Ethernet becomes impossible.
-Thus, in the case of the Platypus boat, **the radio must be configured in Bridge mode**.
+.. note:: The typical configuration is to use the Bullet in *Router* mode with a DHCP server, as to automatically address an IP to each connecting device. If this is the case, this configuration can be performed in the "Network" tab and the changes can be applied with the "Apply" button. After a short connection drop, you may connect to the access point's WiFi network and access it with the IP specified in the "Network" tab. As the Router mode isolates the LAN and WLAN interfaces, connection between wireless devices and the Raspberry's Ethernet becomes impossible. Thus, in the case of the Platypus boat, **the radio must be configured in Bridge mode**.
 
 
 Configuring the Bullet M2HP in Bridge mode
@@ -96,12 +97,14 @@ Configuring the Bullet M2HP in Bridge mode
 
 In the "Network" tab, modify the following fields to configure the radio in bridge mode:
 
-- Network mode: Bridge
-- Management IP Address: Static
-- IP Address: <IPV4 IP> (e.g., 192.168.10.20)
-- Netmask: 255.255.255.0
-- Gateway IP: <First IP in the same range as IP Address> (e.g., 192.168.10.1)
-- Primary DNS: 8.8.8.8
+.. code-block:: bash
+
+    Network mode: Bridge
+    Management IP Address: Static
+    IP Address: <IPV4 IP> (e.g., 192.168.10.20)
+    Netmask: 255.255.255.0
+    Gateway IP: <First IP in the same range as IP Address> (e.g., 192.168.10.1)
+    Primary DNS: 8.8.8.8
 
 <BOTAR IMAGEM AQUI>
 
