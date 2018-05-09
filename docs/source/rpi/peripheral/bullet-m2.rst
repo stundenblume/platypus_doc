@@ -31,7 +31,7 @@ Powering up the Bullet M2HP
 
 As the radio is powered through PoE, it comes with a PoE adapter as seen in the image below (exact model may differ):
 
-.. image:: images/poe_adapter.jpg
+.. image:: images/poe_adapter.png
 	:scale: 50%
 	:alt: Image of the Bullet M2HP PoE adapter
 	:align: center
