@@ -32,7 +32,7 @@ Powering up the Bullet M2HP
 As the radio is powered through PoE, it comes with a PoE adapter as seen in the image below (exact model may differ):
 
 .. image:: images/poe_adapter.png
-	:width: 400pt
+	:width: 600pt
 	:alt: Image of the Bullet M2HP PoE adapter
 	:align: center
 
@@ -40,7 +40,7 @@ After plugging the adapter to a power outlet, the PoE port connects to the Bulle
 
 .. image:: images/bullet_connection.png
     :align: center
-    :width: 400pt
+    :width: 600pt
 
 
 Accessing the Bullet M2HP configuration page
@@ -70,7 +70,7 @@ The Bullet configuration page can the be accessed in a browser by the address ``
 
 .. image:: images/login.png
     :align: center
-    :width: 400pt
+    :width: 600pt
 
 To connect and configure the M2 Bullet, use the credentials:
 
@@ -96,13 +96,13 @@ To configure the Bullet as an access point, change the following configurations 
 
 .. image:: images/set_access_point.png
     :align: center
-    :width: 400pt
+    :width: 600pt
 
 Click "Change" but **do not click "Apply" yet**. In the leftmost tab, uncheck the "AirMax" box and click "Change". 
 
 .. image:: images/disable_airmax.png
     :align: center
-    :width: 400pt
+    :width: 600pt
 
 This is sufficient to configure the radio as an Access Point, and it will generate a WiFi network with the specified SSID. However, there are two possible configurations regarding the Bullet's network role: *Bridge* and *Router* mode. 
 
@@ -125,7 +125,7 @@ In the ``Network`` tab, modify the following fields to configure the radio in br
 
 .. image:: images/set_bridge.png
     :align: center
-    :width: 400pt
+    :width: 600pt
 
 Click ``Change`` and then ``Apply``. After a short connection drop, the radio will generate a WiFi network with the SSID specified in the ``Wireless`` tab.
 
