@@ -32,12 +32,11 @@ Powering up the Bullet M2HP
 As the radio is powered through PoE, it comes with a PoE adapter as seen in the image below (exact model may differ):
 
 .. image:: images/poe_adapter.png
-	:scale: 50%
+	:width: 400pt
 	:alt: Image of the Bullet M2HP PoE adapter
 	:align: center
 
-After plugging the adapter to a power outlet, the PoE port connects to the Bullet, while the LAN port connects to the Raspberry Pi's Ethernet port.
-In the Platypus boat, the connection is the same, except for the power which comes from the boat's electronics board, as shown in the diagram below:
+After plugging the adapter to a power outlet, the PoE port connects to the Bullet, while the LAN port connects to the Raspberry Pi's Ethernet port. In the Platypus boat, the connection is the same, except for the power which comes from the boat's electronics board, as shown in the diagram below:
 
 .. image:: images/bullet_connection.png
     :align: center
@@ -49,7 +48,7 @@ Accessing the Bullet M2HP configuration page
 
 From a factory reset, the Bullet can be accessed through its standard IP (``192.168.1.20``). However, its default settings are WiFi station and bridge mode. As such, it does not generate a WiFi network nor runs a DHCP server, meaning that a physical cable connection and manual IP setting are necessary. The computer/Raspberry must also be operating in the same IP range as the Bullet, thus it must be a ``192.168.1.x`` IP.
 
-For this initial setup, it is recommended to connect the Bullet to a conventional computer, as the configuration is done via browser (or to a Raspberry running a graphical interface OS). In linux, we can manually connect to the bullet through the ``ifconfig`` command. After connecting the LAN adapter port into the computer, run:
+For this initial setup, it is recommended to connect the Bullet to a conventional computer, as the configuration is done via browser (or to a Raspberry running a graphical interface OS). In Linux, we can manually connect to the bullet through the ``ifconfig`` command. After connecting the LAN adapter port into the computer, run:
 
 .. code-block:: bash
 
@@ -61,7 +60,7 @@ to find out which interface is responsible for Ethernet (e.g., ``eth0``, ``enp0s
 
     $ sudo ifconfig <name_of_interface> 192.168.1.x netmask 255.255.255.0
 
-where x is a number from 1 to 254, excluding 20. For example:
+where ``x`` is a number from 1 to 254, excluding 20. For example:
 
 .. code-block:: bash
 
