@@ -15,7 +15,7 @@ About
     :width: 400pt
 
 
-Features:
+**Features**:
 
 - 100+ Mbps throughput
 - Weatherproof design
@@ -31,7 +31,7 @@ Powering up the Bullet M2HP
 
 As the radio is powered through PoE, it comes with a PoE adapter as seen in the image below (exact model may differ):
 
-.. image:: images/bullet_poe.jpg
+.. image:: images/poe_adapter.jpg
 	:scale: 50%
 	:alt: Image of the Bullet M2HP PoE adapter
 	:align: center
