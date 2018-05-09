@@ -23,8 +23,7 @@ Features:
 - Communication range up to 50 km (depending on the antenna)
 - Power-over-Ethernet (PoE)
 
-In the case of the Platypus boat, the Bullet is used as an access point (hotspot), generating a long-range WiFi (WLAN) network for communcation between the boat and the on-shore devices.
-It connects to the Raspberry Pi via its Ethernet port (LAN).
+In the case of the Platypus boat, the Bullet is used as an access point (hotspot), generating a long-range WiFi (WLAN) network for communcation between the boat and the on-shore devices. It connects to the Raspberry Pi via its Ethernet port (LAN).
 
 
 Powering up the Bullet M2HP
@@ -56,7 +55,7 @@ For this initial setup, it is recommended to connect the Bullet to a conventiona
 
     $ sudo ifconfig
 
-to find out which interface is responsible for Ethernet (e.g., eth0, enp0s3). To manually assign an IP and connect, run:
+to find out which interface is responsible for Ethernet (e.g., ``eth0``, ``enp0s3``). To manually assign an IP and connect, run:
 
 .. code-block:: bash
 
@@ -68,7 +67,18 @@ where x is a number from 1 to 254, excluding 20. For example:
 
     $ sudo ifconfig eth0 192.168.1.7 netmask 255.255.255.0
 
-The Bullet configuration page can the be accessed in a browser with the ``192.168.1.20`` IP. A untrusted connection or security certificate warning may appear, which can be safely ignored. The default username and password are both **ubnt**.
+The Bullet configuration page can the be accessed in a browser by the address ``http://192.168.1.20``. A untrusted connection or security certificate warning may appear, which can be safely ignored. A screen like the one below will appear:
+
+.. image:: images/login.png
+    :align: center
+    :width: 400pt
+
+To connect and configure the M2 Bullet, use the credentials:
+
+.. code-block:: bash
+
+    login: ubnt
+    password: ubnt
 
 
 Configuring the Bullet M2HP as an Access Point
@@ -85,9 +95,17 @@ To configure the Bullet as an access point, change the following configurations 
     Output power: Max
     Security: None (you may setup WPA-PSK or WPA2-PSK if prefered)
 
-<BOTAR IMAGEM AQUI>
+.. image:: images/set_access_point.png
+    :align: center
+    :width: 400pt
 
-Click "Change" but **do not click "Apply" yet**. In the leftmost tab, uncheck the "AirMax" box and click "Change". This is sufficient to configure the radio as an Access Point, and it will generate a WiFi network with the specified SSID. However, there are two possible configurations regarding the Bullet's network role: *Bridge* and *Router* mode.
+Click "Change" but **do not click "Apply" yet**. In the leftmost tab, uncheck the "AirMax" box and click "Change". 
+
+.. image:: images/disable_airmax.png
+    :align: center
+    :width: 400pt
+
+This is sufficient to configure the radio as an Access Point, and it will generate a WiFi network with the specified SSID. However, there are two possible configurations regarding the Bullet's network role: *Bridge* and *Router* mode. 
 
 .. note:: The typical configuration is to use the Bullet in *Router* mode with a DHCP server, as to automatically address an IP to each connecting device. If this is the case, this configuration can be performed in the "Network" tab and the changes can be applied with the "Apply" button. After a short connection drop, you may connect to the access point's WiFi network and access it with the IP specified in the "Network" tab. As the Router mode isolates the LAN and WLAN interfaces, connection between wireless devices and the Raspberry's Ethernet becomes impossible. Thus, in the case of the Platypus boat, **the radio must be configured in Bridge mode**.
 
@@ -95,7 +113,7 @@ Click "Change" but **do not click "Apply" yet**. In the leftmost tab, uncheck th
 Configuring the Bullet M2HP in Bridge mode
 -------------------------------------------
 
-In the "Network" tab, modify the following fields to configure the radio in bridge mode:
+In the ``Network`` tab, modify the following fields to configure the radio in bridge mode:
 
 .. code-block:: bash
 
@@ -106,15 +124,17 @@ In the "Network" tab, modify the following fields to configure the radio in brid
     Gateway IP: <First IP in the same range as IP Address> (e.g., 192.168.10.1)
     Primary DNS: 8.8.8.8
 
-<BOTAR IMAGEM AQUI>
+.. image:: images/set_bridge.png
+    :align: center
+    :width: 400pt
 
-Click ``Change`` and then ``Apply``. After a short connection drop, the radio will generate a WiFi network with the SSID specified in the "Wireless" tab.
+Click ``Change`` and then ``Apply``. After a short connection drop, the radio will generate a WiFi network with the SSID specified in the ``Wireless`` tab.
 
 
 Testing the connection between WiFi and the Raspberry's Ethernet
 -----------------------------------------------------------------
 
-As there is no DHCP server, the Raspberry and WiFi devices must be manually connected to the Bullet. Once again, this can be done with the ``ifconfig`` command in Linux. For the Raspberry, the interface used is the Ethernet (e.g., eth0). After connecting the LAN cable on the Raspberry's Ethernet port, run:
+As there is no DHCP server, the Raspberry and WiFi devices must be manually connected to the Bullet. Once again, this can be done with the ``ifconfig`` command in Linux. For the Raspberry, the interface used is the Ethernet (e.g., ``eth0``). After connecting the LAN cable on the Raspberry's Ethernet port, run:
 
 .. code-block:: bash
 
