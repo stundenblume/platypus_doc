@@ -132,6 +132,8 @@ The output should look something like this:
   -1309   -3105   -1799     1874    1201    3671       17      20      -1
   -1309   -3105   -1799     1898    1214    3663       11      15      -2
 
+where the third first values correspond to the X-Y-Z values of the raw magnetometer reading, the next three values correspond to the X-Y-Z values of the raw accelerometer reading and the last three values correspond to the X-Y-Z values of the raw gyro reading.
+
 
 Installing ROS Package
 -----------------------
