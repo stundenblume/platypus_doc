@@ -179,6 +179,48 @@ In another terminal, run:
 And check the topics that appear.
 
 
+Calibrating IMU using ROS Package
+----------------------------------
+
+The calibration needs to be performed by the RTIMULibCal utility provided by the library. In case of calibrating more than one IMU, the name to the calibration file can be passed as argument to  RTIMULibCal as:
+
+.. code-block:: bash
+
+   $ RTIMULibCal jetson_imu
+
+This command will run the calibration program where you can choose for calibrating the following:
+
+.. code-block:: bash
+
+   Options are:
+
+   m - calibrate magnetometer with min/max
+   e - calibrate magnetometer with ellipsoid (do min/max first)
+   a - calibrate accelerometers
+   x - exit
+
+   Enter option:
+
+In order to calibrate the magnetometer, press ``m`` and the following message appear:
+
+.. code-block:: bash
+
+   Magnetometer min/max calibration
+   --------------------------------
+   Waggle the IMU chip around, ensuring that all six axes
+   (+x, -x, +y, -y and +z, -z) go through their extrema.
+   When all extrema have been achieved, enter 's' to save, 'r' to reset
+   or 'x' to abort and discard the data.
+
+   Press any key to start...
+
+Press any key and start to waggle the IMU around, checking on the screen that the values are changing. You can stop when no changes appear on the screen anymore to any position you put the IMU. Then, press ``s`` to save the data in the ``jetson_imu.ini`` file in the current directory. The next step is to copy the ``.ini`` file to the config directory of the package. As we have only one IMU in the Jetson, we can move the file to the ``.ros`` package changing its name to the current ``RTIMULib.ini`` used by the ROS launch.
+
+.. code-block:: bash
+
+   $ mv jetson_imu.ini ~/.ros/RTIMULib.ini
+
+Now, when starting the IMU ROS node, the calibration file will be loaded.
 
 References
 -----------
