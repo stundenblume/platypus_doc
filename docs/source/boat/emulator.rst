@@ -54,6 +54,15 @@ If everything goes right, you can select your AVD and ``Start...``. Android emul
    :align: center
    :width: 500pt
 
+.. ERROR::
+   When loading the AVD (Boat) may appear an error ``sh: 1: glxinfo: not found``.
+
+In case the ``sh: 1: glxinfo: not found`` error appear, you have to install ``mesa-utils`` via ``apt-get`` by using:
+
+.. code-block:: bash
+
+   $ sudo apt-get install mesa-utils
+
 
 Installing and Configuring Platypus Control
 --------------------------------------------
@@ -64,7 +73,7 @@ Installing and Configuring Platypus Control
 
    $ wget --no-check-certificate --content-disposition https://raw.githubusercontent.com/lsa-pucrs/platypus_doc/master/docs/source/boat/scripts/tablet.apk
 
-Send the apk to the emulator and install it. If it was successful, the app will appear in the list of installed apps as presented in the picture:
+Send the apk to the emulator and install it. In order to send the apk to the emulator, just drag and drop the file inside the emulator. If it was successful, the app will appear in the list of installed apps as presented in the picture:
 
 .. image:: images/installed.png
    :align: center
