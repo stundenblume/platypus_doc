@@ -1,0 +1,17 @@
+# interfaces(5) file used by ifup(8) and ifdown(8)
+# Include files from /etc/network/interfaces.d:
+source-directory /etc/network/interfaces.d
+
+auto lo
+iface lo inet loopback
+
+auto wlan0
+iface wlan0 inet static
+    address 192.168.1.100
+    netmask 255.255.255.0
+    network 192.168.1.0
+    broadcast 192.168.1.255
+    gateway 192.168.1.202
+    dns-nameservers 192.168.1.202 8.8.8.8
+    wpa-ssid lsa_boat_2
+    wpa-psk 40d244815ab0ed854cfb08b7b4a3b9f59ef0eaf8da5ae64801b502e2e514992c
