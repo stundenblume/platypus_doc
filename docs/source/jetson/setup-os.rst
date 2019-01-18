@@ -91,7 +91,7 @@ We add the following line to the file:
 
 .. code-block:: bash
 
-    /dev/disk/by-uuid/ac183b24-3e75-4190-bcb7-32160e9a7c55 /media/JetsonSSD ext defaults 0 0
+    /dev/disk/by-uuid/ac183b24-3e75-4190-bcb7-32160e9a7c55 /media/JetsonSSD ext4 defaults 0 2
 
 Save the file and close it. Next time Ubuntu is started, the SSD disk will be mounted at startup.
 
