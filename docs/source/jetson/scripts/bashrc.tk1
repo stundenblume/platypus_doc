@@ -128,7 +128,7 @@ export __GL_PERFMON_MODE=1
 
 # ROS
 source /opt/ros/indigo/setup.bash
-/home/ubuntu/catkin_ws/devel/setup.bash
+source /home/ubuntu/catkin_ws/devel/setup.bash
 
 export ROS_MASTER_URI=192.168.1.202:11311
 export ROS_HOSTNAME=192.168.1.100
