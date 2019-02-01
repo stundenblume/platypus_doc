@@ -1,6 +1,6 @@
-=============================================
+==================
 Setting Up the OS
-=============================================
+==================
 
 NVIDIA Jetson TK1 exhibits a lot of promise with lots of raw performance for its form factor and intended use, with low power consumption to boot. But as is typical with most of these types of products, the "out of the box" experience needs some help. A missing part in TK1 is a support out of the box for WiFi or Bluetooth. For people coming from commodity PCs, tablets, phones and such this is a little confusing. Usually one just installs a driver and the device starts to work. In the case of the Jetson, the actual signals on the board need to be played with a little, as well as having the driver issue [1]_. In order to overcome such issues, a new Linux kernel named **Grinch** includes a lot of the features to which most desktop users are accustomed.
 
@@ -46,78 +46,6 @@ The ``extlinux.conf`` file looks like:
         APPEND console=ttyS0,115200n8 console=tty1 no_console_suspend=1 lp0_vec=2064@0xf46ff000 mem=2015M@2048M memtype=255 ddr_die=2048M@2048M section=256M pmuboard=0x0177:0x0000:0x02:0x43:0x00 tsec=32M@3913M otf_key=c75e5bb91eb3bd947560357b64422f85 usbcore.old_scheme_first=1 core_edp_mv=1150 core_edp_ma=4000 tegraid=40.1.1.0.0 debug_uartport=lsport,3 power_supply=Adapter audio_codec=rt5640 modem_id=0 android.kerneltype=normal fbcon=map:1 commchip_id=0 usb_port_owner_info=2 lane_owner_info=6 emc_max_dvfs=0 touch_id=0@0 board_info=0x0177:0x0000:0x02:0x43:0x00 net.ifnames=0 root=/dev/mmcblk0p1 rw rootwait tegraboot=sdmmc gpt
 
 Look for ``usb_port_owner_info=0`` in the file and replace it by ``usb_port_owner_info=2``. Finally, save the file and exit.
-
-
-Adding a SSD Disk
------------------
-
-In order to add a SSD disk in Jetson board, we have to connect a SATA cable and a power cable in the board as illustrated in the image below:
-
-.. image:: images/connect_ssd.png
-   :align: center
-   :width: 500pt
-
-After connecting the SSD disk, we format it using ``ext4`` file system by logging into Ubuntu and accessing ``Disks`` application. Inside the application, select the SSD disk and click on the gear and select ``Format`` (or press ``Shift+Ctrl+F``). Then, add a name to the disk (e.g. ``JetsonSSD``) and click in ``Format``, as the images below:
-
-.. image:: images/disks.png
-   :align: center
-   :width: 500pt
-
-.. image:: images/format.png
-   :align: center
-   :width: 300pt
-
-After formating the SSD disk, we have to mount it at startup. In order to do it, we have to add a call in ``/etc/fstab`` with the mounting point. In order to add this line, we have to discover the uuid of the device. With the disk manually mounted, we run the ``mount`` command to discover where the SSD is mounted, obtaining:
-
-.. code-block:: bash
-
-    $ mount
-    /dev/sda on /media/ubuntu/JetsonSSD type ext4 (rw,nosuid,nodev,uhelper=udisk2)
-
-Knowing the mounting local of the SSD disk (``/dev/sda``), we have to discover its uuid. To discover the uuid we run:
-
-.. code-block:: bash
-
-    $ ls -al /dev/disk/by-uuid
-    lrwxrwxrwx 1 root root   9 Dec 31 21:00 ac183b24-3e75-4190-bcb7-32160e9a7c55 -> ../../sda
-
-Having the uuid of the disk we can add a line to the ``/etc/fstab`` with a call to the mounting point. Running the command:
-
-.. code-block:: bash
-
-    $ sudo gedit /etc/fstab
-
-We add the following line to the file:
-
-.. code-block:: bash
-
-    /dev/disk/by-uuid/ac183b24-3e75-4190-bcb7-32160e9a7c55 /media/JetsonSSD ext4 defaults 0 2
-
-Save the file and close it. Next time Ubuntu is started, the SSD disk will be mounted at startup.
-
-
-Important Packages
--------------------
-
-Here we add several packages that should be installed to work in Jetson. All packages are installed via ``apt-get``. In order to easily install all packages a script was created and can be downloaded by running:
-
-.. code-block:: bash
-
-    $ wget --no-check-certificate --content-disposition https://raw.githubusercontent.com/lsa-pucrs/platypus_doc/master/docs/source/jetson/scripts/additionalPackages.sh
-    $ chmod +x additionalPackages.sh
-    $ ./additionalPackages.sh
-
-The script installs the following packages:
-
-- `Informational list of build-essential packages (build-essential) <https://packages.ubuntu.com/trusty/build-essential>`_
-- `Cross-platform, open-source make system (CMake) <https://packages.ubuntu.com/trusty/cmake>`_
-- `Curses based user interface for CMake (cmake-curses-gui) <https://packages.ubuntu.com/trusty/cmake-curses-gui>`_
-- `GNU C++ compiler (G++) <https://packages.ubuntu.com/trusty/g++>`_
-- `Set of I2C tools for Linux <https://packages.ubuntu.com/trusty/i2c-tools>`_
-- `Userspace I2C programming library development files <https://packages.ubuntu.com/trusty/libi2c-dev>`_
-- `Distributed revision control system (Git) <https://packages.ubuntu.com/trusty/git>`_
-- `Multiple GNOME terminals in one window <https://packages.ubuntu.com/trusty/terminator>`_
-- `Terminal multiplexer with VT100/ANSI terminal emulation (Screen) <https://packages.ubuntu.com/trusty/screen>`_
 
 
 References
