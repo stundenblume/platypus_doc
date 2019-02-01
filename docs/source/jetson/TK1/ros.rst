@@ -14,7 +14,7 @@ JetsonPack for Jetson TK1 is based on Ubuntu 14.04 and thus, the ROS version to 
 
 .. code-block:: bash
 
-   $ wget --no-check-certificate --content-disposition https://raw.githubusercontent.com/lsa-pucrs/platypus_doc/master/docs/source/jetson/scripts/installROS.sh
+   $ wget --no-check-certificate --content-disposition https://raw.githubusercontent.com/lsa-pucrs/platypus_doc/master/docs/source/jetson/TK1/scripts/installROS.sh
    $ chmod +x installROS.sh
    $ ./installROS.sh
 
