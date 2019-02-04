@@ -16,6 +16,8 @@ NVIDIA Tegra K1 (TK1) is NVIDIA's first mobile processor to have the same advanc
    Post Installation <../post-install>
    Cloning and Restoring Image <image>
    Installing ROS <ros>
+   Configuring Network <peripheral/network>
+   Configuring RGBD Camera (ZED) <peripheral/zed>
 
 References
 -----------

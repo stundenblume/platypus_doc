@@ -4,7 +4,7 @@ Jetson TX2 Board
 
 NVIDIA Tegra X2 (TX2) is the fastest, most power-efficient embedded AI computing device. This 7.5-watt supercomputer on a module brings true AI computing at the edge. It's built around an NVIDIA Pascal-family GPU and loaded with 8GB of memory and 59.7GB/s of memory bandwidth. It features a variety of standard hardware interfaces that make it easy to integrate it into a wide range of products and form factors. [1]_.
 
-.. image:: images/tx2_board.jpg
+.. image:: ../images/tx2_board.jpg
     :align: center
     :width: 500pt
 
@@ -12,9 +12,12 @@ NVIDIA Tegra X2 (TX2) is the fastest, most power-efficient embedded AI computing
 
    Hardware Specification <spec>
    Installing JetPack L4T <os-install>
-   Setting Up the OS <setup-os>
-   Installing ROS <ros>
+   Post Installation <../post-install>
    Cloning and Restoring Image <image>
+   Installing ROS <ros>
+   Configuring Network <peripheral/network>
+   Configuring RGBD Camera (ZED) <peripheral/zed>
+
 
 References
 -----------
