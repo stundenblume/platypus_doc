@@ -33,7 +33,7 @@ After installing CUDA, we have to set the paths in `.bashrc` file, using:
     $ echo "export PATH=$PATH:$CUDA_HOME/bin" >> ~/.bashrc
     $ echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CUDA_HOME/lib64" >> ~/.bashrc
 
-Next, we have to install `Cudnn` in the system. In order to do so, transfer the `libcudnn7` package from `jetpack_download` folder and install it with:
+Next, we have to install `CuDNN` in the system. In order to do so, transfer the `libcudnn7` package from `jetpack_download` folder and install it with:
 
 .. code-block:: bash
 
@@ -81,5 +81,21 @@ Finally, we can install OpenCV package. To do so, we first have to install its d
     $ sudo dpkg -i libopencv-dev_3.3.1_t186_arm64.deb
     $ sudo dpkg -i libopencv-samples_3.3.1_t186_arm64.deb
 
+
+Fixing LC_CTYPE Warning
+------------------------
+
+In case LC_TYPE yields a warning when logging into the system as:
+
+.. code-block:: bash
+
+    -bash: warning: setlocale: LC_CTYPE: cannot change locale (pt_BR.UTF-8)
+
+You could fix it by adding the locale to the system. In order to do this, run:
+
+.. code-block:: bash
+
+    $ sudo locale-gen en_US en_US.UTF-8 pt_BR.UTF-8
+    $ sudo dpkg-reconfigure locales
 
 
